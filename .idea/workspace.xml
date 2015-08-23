@@ -23,30 +23,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Color.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Color.php">
+      <file leaf-file-name="AppKernel.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="64" selection-start="468" selection-end="468" vertical-scroll-proportion="-9.666667" vertical-offset="243" max-vertical-offset="846">
-              <folding>
-                <element signature="e#6#90#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductCategoryAdmin.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Admin/ProductCategoryAdmin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="0" selection-start="1119" selection-end="1119" vertical-scroll-proportion="-12.666667" vertical-offset="432" max-vertical-offset="1152">
+            <state line="34" column="36" selection-start="1357" selection-end="1357" vertical-scroll-proportion="-9.555555" vertical-offset="336" max-vertical-offset="1044">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductAdmin.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Admin/ProductAdmin.php">
+      <file leaf-file-name="ColorAdmin.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Admin/ColorAdmin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="0" selection-start="1175" selection-end="1175" vertical-scroll-proportion="-16.0" vertical-offset="378" max-vertical-offset="1224">
+            <state line="49" column="0" selection-start="1161" selection-end="1212" vertical-scroll-proportion="-12.0" vertical-offset="486" max-vertical-offset="1224">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductFile.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/ProductFile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="3" selection-start="776" selection-end="776" vertical-scroll-proportion="-12.666667" vertical-offset="378" max-vertical-offset="1206">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="2" selection-start="179" selection-end="179" vertical-scroll-proportion="0.33904108" vertical-offset="0" max-vertical-offset="584">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="File.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/File.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="13" selection-start="663" selection-end="663" vertical-scroll-proportion="5.3333335" vertical-offset="540" max-vertical-offset="4158">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/services.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
               <folding />
             </state>
           </provider>
@@ -61,57 +86,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ColorAdmin.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Admin/ColorAdmin.php">
+      <file leaf-file-name="color.form.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Admin/color.form.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="13" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.40206185" vertical-offset="486" max-vertical-offset="1224">
+            <state line="5" column="26" selection-start="125" selection-end="125" vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="504">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BBUserExtension.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BB/UserBundle/DependencyInjection/BBUserExtension.php">
+      <file leaf-file-name="list.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/views/CRUD/list.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="9" selection-start="607" selection-end="607" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="558">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="324">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Configuration.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/DependencyInjection/Configuration.php">
+      <file leaf-file-name="base_list.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/views/CRUD/base_list.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="4" selection-start="53" selection-end="53" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="630">
-              <folding>
-                <element signature="e#49#109#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppExtension.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/DependencyInjection/AppExtension.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="1" selection-start="863" selection-end="863" vertical-scroll-proportion="-16.0" vertical-offset="0" max-vertical-offset="558">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="security.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="28" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1116">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Configuration.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BB/UserBundle/DependencyInjection/Configuration.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="612">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="38.0" vertical-offset="1026" max-vertical-offset="4482">
               <folding />
             </state>
           </provider>
@@ -133,22 +129,25 @@
         <option value="$PROJECT_DIR$/src/BB/UserBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/BB/UserBundle/BBUserBundle.php" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/ProductCategory.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/File.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Flower.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/ProductFile.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Product.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Color.php" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/DependencyInjection/AppExtension.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/DependencyInjection/Configuration.php" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Admin/ProductCategoryAdmin.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Admin/ProductAdmin.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Admin/FlowerAdmin.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Admin/color.form.html.twig" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Admin/ColorAdmin.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/ProductFile.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -200,6 +199,74 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bundles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bundles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="genemuform" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -280,6 +347,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -491,62 +588,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="22" selection-start="1617" selection-end="1619" vertical-scroll-proportion="0.0" vertical-offset="818" max-vertical-offset="5364">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="27" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="324">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="31" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BB/UserBundle/BBUserBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="1" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="270">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BB/UserBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="28" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="648">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BB/UserBundle/Entity/Group.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="31" selection-start="219" selection-end="247" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="540">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="92" selection-start="2349" selection-end="2349" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="1422">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="16" selection-start="2319" selection-end="2320" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5346">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BB/UserBundle/BBUserBundle.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="1" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="270">
@@ -655,13 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="50" selection-start="1068" selection-end="1068" vertical-scroll-proportion="-12.666667" vertical-offset="162" max-vertical-offset="1368">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sonata-project/media-bundle/Entity/BaseGalleryHasMedia.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="48" selection-start="381" selection-end="381" vertical-scroll-proportion="-5.3333335" vertical-offset="0" max-vertical-offset="486">
@@ -711,21 +745,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/File.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="13" selection-start="663" selection-end="663" vertical-scroll-proportion="0.86567163" vertical-offset="0" max-vertical-offset="2448">
-          <folding>
-            <element signature="e#6#90#0" expanded="true" />
-            <element signature="e#120#152#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Flower.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="14" selection-start="249" selection-end="249" vertical-scroll-proportion="0.47761193" vertical-offset="0" max-vertical-offset="756">
           <folding>
-            <element signature="e#6#90#0" expanded="true" />
+            <element signature="e#6#90#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -734,7 +758,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="0" selection-start="549" selection-end="549" vertical-scroll-proportion="0.92537314" vertical-offset="0" max-vertical-offset="756">
           <folding>
-            <element signature="e#6#90#0" expanded="true" />
+            <element signature="e#6#90#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -743,16 +767,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="91" selection-end="91" vertical-scroll-proportion="0.20895523" vertical-offset="0" max-vertical-offset="1422">
           <folding>
-            <element signature="e#6#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/ProductFile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="32" selection-start="152" selection-end="152" vertical-scroll-proportion="0.26865673" vertical-offset="0" max-vertical-offset="684">
-          <folding>
-            <element signature="e#6#90#0" expanded="true" />
+            <element signature="e#6#90#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -761,15 +776,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="64" selection-start="468" selection-end="468" vertical-scroll-proportion="-9.666667" vertical-offset="243" max-vertical-offset="846">
           <folding>
-            <element signature="e#6#90#0" expanded="true" />
+            <element signature="e#6#90#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -789,7 +797,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="28" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1116">
+        <state line="42" column="28" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.6126418" vertical-offset="378" max-vertical-offset="1116">
           <folding />
         </state>
       </provider>
@@ -803,44 +811,107 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BB/UserBundle/DependencyInjection/BBUserExtension.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="9" selection-start="607" selection-end="607" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="558">
+        <state line="21" column="9" selection-start="607" selection-end="607" vertical-scroll-proportion="0.53731346" vertical-offset="0" max-vertical-offset="603">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/DependencyInjection/AppExtension.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="1" selection-start="863" selection-end="863" vertical-scroll-proportion="-16.0" vertical-offset="0" max-vertical-offset="558">
+        <state line="27" column="1" selection-start="863" selection-end="863" vertical-scroll-proportion="0.7164179" vertical-offset="0" max-vertical-offset="603">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/DependencyInjection/Configuration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="4" selection-start="53" selection-end="53" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="630">
+        <state line="4" column="4" selection-start="53" selection-end="53" vertical-scroll-proportion="0.1220339" vertical-offset="0" max-vertical-offset="630">
           <folding>
-            <element signature="e#49#109#0" expanded="true" />
+            <element signature="e#49#109#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1204" selection-end="1204" vertical-scroll-proportion="-6.888889" vertical-offset="336" max-vertical-offset="1044">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Admin/ProductCategoryAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1119" selection-end="1119" vertical-scroll-proportion="-12.666667" vertical-offset="432" max-vertical-offset="1152">
+        <state line="47" column="0" selection-start="1119" selection-end="1119" vertical-scroll-proportion="0.58762884" vertical-offset="432" max-vertical-offset="1152">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Admin/ProductAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="1175" selection-end="1175" vertical-scroll-proportion="-16.0" vertical-offset="378" max-vertical-offset="1224">
+        <state line="49" column="0" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.742268" vertical-offset="378" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/views/CRUD/base_list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="38.0" vertical-offset="1026" max-vertical-offset="4482">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/views/CRUD/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/views/CRUD/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="609">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/views/CRUD/base_edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.48681897" vertical-offset="277" max-vertical-offset="846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/views/CRUD/base_edit_form_macro.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/views/CRUD/base_edit_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.56942004" vertical-offset="324" max-vertical-offset="2160">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Admin/color.form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="26" selection-start="125" selection-end="125" vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="504">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="1069" selection-end="1069" vertical-scroll-proportion="-13.333333" vertical-offset="162" max-vertical-offset="1368">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="36" selection-start="1357" selection-end="1357" vertical-scroll-proportion="-9.555555" vertical-offset="336" max-vertical-offset="1044">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
           <folding />
         </state>
       </provider>
@@ -854,7 +925,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Admin/ColorAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="13" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.40206185" vertical-offset="486" max-vertical-offset="1224">
+        <state line="49" column="0" selection-start="1161" selection-end="1212" vertical-scroll-proportion="-12.0" vertical-offset="486" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/File.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="13" selection-start="663" selection-end="663" vertical-scroll-proportion="5.3333335" vertical-offset="540" max-vertical-offset="4158">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/ProductFile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="3" selection-start="776" selection-end="776" vertical-scroll-proportion="-12.666667" vertical-offset="378" max-vertical-offset="1206">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="2" selection-start="179" selection-end="179" vertical-scroll-proportion="0.33904108" vertical-offset="0" max-vertical-offset="584">
           <folding />
         </state>
       </provider>

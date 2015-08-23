@@ -127,4 +127,106 @@ class File
         // clean up the file property as you won't need it anymore
         $this->file = null;
     }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set fileName
+     *
+     * @param string $fileName
+     * @return File
+     */
+    public function setFileName($fileName)
+    {
+        $this->fileName = $fileName;
+
+        return $this;
+    }
+
+    /**
+     * Get fileName
+     *
+     * @return string 
+     */
+    public function getFileName()
+    {
+        return $this->fileName;
+    }
+
+    /**
+     * Set filePath
+     *
+     * @param string $filePath
+     * @return File
+     */
+    public function setFilePath($filePath)
+    {
+        $this->filePath = $filePath;
+
+        return $this;
+    }
+
+    /**
+     * Get filePath
+     *
+     * @return string 
+     */
+    public function getFilePath()
+    {
+        return $this->filePath;
+    }
+
+    /**
+     * Set fileOriginalName
+     *
+     * @param string $fileOriginalName
+     * @return File
+     */
+    public function setFileOriginalName($fileOriginalName)
+    {
+        $this->fileOriginalName = $fileOriginalName;
+
+        return $this;
+    }
+
+    /**
+     * Get fileOriginalName
+     *
+     * @return string 
+     */
+    public function getFileOriginalName()
+    {
+        return $this->fileOriginalName;
+    }
+
+    /**
+     * Set fileSize
+     *
+     * @param float $fileSize
+     * @return File
+     */
+    public function setFileSize($fileSize)
+    {
+        $this->fileSize = $fileSize;
+
+        return $this;
+    }
+
+    /**
+     * Get fileSize
+     *
+     * @return float 
+     */
+    public function getFileSize()
+    {
+        return $this->fileSize;
+    }
 }
