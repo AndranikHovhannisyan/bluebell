@@ -1,0 +1,4 @@
+services:
+#    bb_user.example:
+#        class: BB\UserBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

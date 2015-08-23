@@ -1,0 +1,24 @@
+services:
+    app.admin.product:
+        class: AppBundle\Admin\ProductAdmin
+        arguments: [~, AppBundle\Entity\Product, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Product}
+
+    app.admin.color:
+        class: AppBundle\Admin\ColorAdmin
+        arguments: [~, AppBundle\Entity\Color, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Color}
+
+    app.admin.flower:
+        class: AppBundle\Admin\FlowerAdmin
+        arguments: [~, AppBundle\Entity\Flower, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Flower}
+
+    app.admin.product_category:
+        class: AppBundle\Admin\ProductCategoryAdmin
+        arguments: [~, AppBundle\Entity\ProductCategory, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: ProductCategory}
