@@ -36,15 +36,16 @@ class Product
     protected $discounts;
 
     /**
-     * @ORM\OneToMany(targetEntity="File", mappedBy="product")
+     * @ORM\OneToOne(targetEntity="BB\MediaBundle\Entity\Gallery", inversedBy="product")
+     * @ORM\JoinColumn(name="gallery_id", referencedColumnName="id")
      */
-    protected $pictures;
+    protected $gallery;
 
     /**
-     * @ORM\OneToOne(targetEntity="File")
-     * @ORM\JoinColumn(name="basic_picture_id", referencedColumnName="id")
+     * @ORM\OneToOne(targetEntity="BB\MediaBundle\Entity\Media", inversedBy="product")
+     * @ORM\JoinColumn(name="media_id", referencedColumnName="id")
      */
-    protected $basicPicture;
+    protected $media;
 
     /**
      * @ORM\ManyToMany(targetEntity="Flower", mappedBy="products")]
@@ -76,7 +77,6 @@ class Product
      */
     public function __construct()
     {
-        $this->pictures = new \Doctrine\Common\Collections\ArrayCollection();
         $this->flowers = new \Doctrine\Common\Collections\ArrayCollection();
         $this->colors = new \Doctrine\Common\Collections\ArrayCollection();
     }
@@ -135,62 +135,6 @@ class Product
     public function getDiscounts()
     {
         return $this->discounts;
-    }
-
-    /**
-     * Add pictures
-     *
-     * @param \AppBundle\Entity\File $pictures
-     * @return Product
-     */
-    public function addPicture(\AppBundle\Entity\File $pictures)
-    {
-        $this->pictures[] = $pictures;
-
-        return $this;
-    }
-
-    /**
-     * Remove pictures
-     *
-     * @param \AppBundle\Entity\File $pictures
-     */
-    public function removePicture(\AppBundle\Entity\File $pictures)
-    {
-        $this->pictures->removeElement($pictures);
-    }
-
-    /**
-     * Get pictures
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getPictures()
-    {
-        return $this->pictures;
-    }
-
-    /**
-     * Set basicPicture
-     *
-     * @param \AppBundle\Entity\File $basicPicture
-     * @return Product
-     */
-    public function setBasicPicture(\AppBundle\Entity\File $basicPicture = null)
-    {
-        $this->basicPicture = $basicPicture;
-
-        return $this;
-    }
-
-    /**
-     * Get basicPicture
-     *
-     * @return \AppBundle\Entity\File 
-     */
-    public function getBasicPicture()
-    {
-        return $this->basicPicture;
     }
 
     /**
@@ -280,5 +224,51 @@ class Product
     public function getCategory()
     {
         return $this->category;
+    }
+
+    /**
+     * Set gallery
+     *
+     * @param \BB\MediaBundle\Entity\Gallery $gallery
+     * @return Product
+     */
+    public function setGallery(\BB\MediaBundle\Entity\Gallery $gallery = null)
+    {
+        $this->gallery = $gallery;
+
+        return $this;
+    }
+
+    /**
+     * Get gallery
+     *
+     * @return \BB\MediaBundle\Entity\Gallery 
+     */
+    public function getGallery()
+    {
+        return $this->gallery;
+    }
+
+    /**
+     * Set media
+     *
+     * @param \BB\MediaBundle\Entity\Media $media
+     * @return Product
+     */
+    public function setMedia(\BB\MediaBundle\Entity\Media $media = null)
+    {
+        $this->media = $media;
+
+        return $this;
+    }
+
+    /**
+     * Get media
+     *
+     * @return \BB\MediaBundle\Entity\Media 
+     */
+    public function getMedia()
+    {
+        return $this->media;
     }
 }
