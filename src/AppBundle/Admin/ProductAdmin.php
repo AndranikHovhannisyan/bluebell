@@ -49,6 +49,10 @@ class ProductAdmin extends Admin
         $formMapper
             ->add('price')
             ->add('discounts')
+            ->add('colors')
+            ->add('flowers')
+            ->add('gallery')
+            ->add('media')
         ;
     }
 

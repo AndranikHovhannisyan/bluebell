@@ -48,20 +48,20 @@ class Product
     protected $media;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Flower", mappedBy="products")]
+     * @ORM\ManyToMany(targetEntity="Flower", inversedBy="products")
      * @ORM\JoinTable(name="product_flower",
-     *      joinColumns={@ORM\JoinColumn(name="product_id", referencedColumnName="id")},
-     *      inverseJoinColumns={@ORM\JoinColumn(name="flower_id", referencedColumnName="id")}
+     *      joinColumns={@ORM\JoinColumn(name="flower_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="product_id", referencedColumnName="id")}
      *      )
      */
     protected $flowers;
 
 
     /**
-     * @ORM\ManyToMany(targetEntity="Color", mappedBy="products")]
+     * @ORM\ManyToMany(targetEntity="Color", inversedBy="products")
      * @ORM\JoinTable(name="product_color",
-     *      joinColumns={@ORM\JoinColumn(name="product_id", referencedColumnName="id")},
-     *      inverseJoinColumns={@ORM\JoinColumn(name="color_id", referencedColumnName="id")}
+     *      joinColumns={@ORM\JoinColumn(name="color_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="product_id", referencedColumnName="id")}
      *      )
      */
     protected $colors;
