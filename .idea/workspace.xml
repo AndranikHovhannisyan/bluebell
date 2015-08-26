@@ -23,79 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AppKernel.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="10" selection-start="1521" selection-end="1521" vertical-scroll-proportion="-17.333334" vertical-offset="198" max-vertical-offset="1080">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BBMediaBundle.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BB/MediaBundle/BBMediaBundle.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="1" selection-start="563" selection-end="563" vertical-scroll-proportion="-10.666667" vertical-offset="0" max-vertical-offset="540">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gallery.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BB/MediaBundle/Entity/Gallery.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="0" selection-start="887" selection-end="1223" vertical-scroll-proportion="-6.2222223" vertical-offset="552" max-vertical-offset="1152">
-              <folding>
-                <element signature="e#257#314#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GalleryHasMedia.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BB/MediaBundle/Entity/GalleryHasMedia.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="37" selection-start="483" selection-end="483" vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="720">
-              <folding>
-                <element signature="e#257#330#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Media.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/BB/MediaBundle/Entity/Media.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="32" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.7525773" vertical-offset="534" max-vertical-offset="1152">
-              <folding>
-                <element signature="e#257#310#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Product.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="226" column="5" selection-start="4691" selection-end="4691" vertical-scroll-proportion="-131.55556" vertical-offset="426" max-vertical-offset="4950">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="37" selection-start="2062" selection-end="2062" vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="2574">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autoload.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/autoload.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="324">
+            <state line="11" column="13" selection-start="190" selection-end="190" vertical-scroll-proportion="0.3272727" vertical-offset="0" max-vertical-offset="605">
               <folding />
             </state>
           </provider>
@@ -120,7 +51,6 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/ProductCategory.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/File.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Flower.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Color.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/DependencyInjection/AppExtension.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/DependencyInjection/Configuration.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Admin/ProductCategoryAdmin.php" />
@@ -128,10 +58,7 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Admin/FlowerAdmin.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Admin/color.form.html.twig" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Admin/ColorAdmin.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/ProductFile.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/BB/MediaBundle/PHPCR/Gallery.php" />
         <option value="$PROJECT_DIR$/src/BB/MediaBundle/PHPCR/GalleryHasMedia.php" />
@@ -140,12 +67,19 @@
         <option value="$PROJECT_DIR$/src/BB/MediaBundle/PHPCR/Media.php" />
         <option value="$PROJECT_DIR$/src/BB/MediaBundle/PHPCR/MediaRepository.php" />
         <option value="$PROJECT_DIR$/src/BB/MediaBundle/ApplicationSonataMediaBundle.php" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/BB/MediaBundle/Entity/GalleryHasMedia.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Product.php" />
         <option value="$PROJECT_DIR$/src/BB/MediaBundle/Entity/Gallery.php" />
         <option value="$PROJECT_DIR$/src/BB/MediaBundle/Entity/Media.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Form/Type/ColorType.php" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Form/color_picker.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Color.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Admin/ColorAdmin.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Admin/color.html.twig" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -211,7 +145,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -225,33 +159,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BB" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bluebell" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bluebell" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BB" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MediaBundle" />
+              <option name="myItemId" value="sonata-project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -265,15 +177,101 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BB" />
+              <option name="myItemId" value="sonata-project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MediaBundle" />
+              <option name="myItemId" value="admin-bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sonata-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sonata-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CRUD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sonata-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-bundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -294,12 +292,100 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BB" />
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MediaBundle" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -325,11 +411,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BB" />
+              <option name="myItemId" value="AppBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MediaBundle" />
+              <option name="myItemId" value="Form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Type" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluebell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -354,26 +462,8 @@
               <option name="myItemId" value="AppBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bluebell" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bluebell" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
+              <option name="myItemId" value="Admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -454,10 +544,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="-4" width="1315" height="772" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28515318" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28908092" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -493,18 +583,35 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/BB/UserBundle/Entity/User.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="28" selection-start="255" selection-end="255" vertical-scroll-proportion="0.3432836" vertical-offset="45" max-vertical-offset="648">
+        <state line="226" column="5" selection-start="4691" selection-end="4691" vertical-scroll-proportion="0.0" vertical-offset="4068" max-vertical-offset="5040">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BB/UserBundle/BBUserBundle.php">
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="1" selection-start="117" selection-end="117" vertical-scroll-proportion="0.20895523" vertical-offset="0" max-vertical-offset="603">
+        <state line="70" column="37" selection-start="2062" selection-end="2062" vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="2574">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BB/UserBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="28" selection-start="255" selection-end="255" vertical-scroll-proportion="0.3432836" vertical-offset="45" max-vertical-offset="648" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BB/UserBundle/BBUserBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="1" selection-start="117" selection-end="117" vertical-scroll-proportion="0.20895523" vertical-offset="0" max-vertical-offset="603" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
@@ -519,16 +626,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BB/UserBundle/Entity/Group.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="31" selection-start="219" selection-end="247" vertical-scroll-proportion="0.41791046" vertical-offset="0" max-vertical-offset="603">
-          <folding />
-        </state>
+        <state line="14" column="31" selection-start="219" selection-end="247" vertical-scroll-proportion="0.41791046" vertical-offset="0" max-vertical-offset="603" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sonata-project/media-bundle/Entity/BaseGalleryHasMedia.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="48" selection-start="381" selection-end="381" vertical-scroll-proportion="-5.3333335" vertical-offset="0" max-vertical-offset="486">
-          <folding />
-        </state>
+        <state line="15" column="48" selection-start="381" selection-end="381" vertical-scroll-proportion="-5.3333335" vertical-offset="0" max-vertical-offset="486" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sonata-project/media-bundle/Model/GalleryHasMedia.php">
@@ -543,9 +646,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sonata-project/media-bundle/Model/Gallery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="42" selection-start="377" selection-end="377" vertical-scroll-proportion="0.23880596" vertical-offset="0" max-vertical-offset="3222">
-          <folding />
-        </state>
+        <state line="15" column="42" selection-start="377" selection-end="377" vertical-scroll-proportion="0.23880596" vertical-offset="0" max-vertical-offset="3222" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sonata-project/media-bundle/Entity/BaseGallery.php">
@@ -577,11 +678,6 @@
         <state line="31" column="0" selection-start="549" selection-end="549" vertical-scroll-proportion="0.92537314" vertical-offset="0" max-vertical-offset="756" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Color.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="64" selection-start="468" selection-end="468" vertical-scroll-proportion="-9.666667" vertical-offset="243" max-vertical-offset="846" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BB/UserBundle/DependencyInjection/Configuration.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617" />
@@ -589,9 +685,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="28" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.6126418" vertical-offset="378" max-vertical-offset="1116">
-          <folding />
-        </state>
+        <state line="42" column="28" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.6126418" vertical-offset="378" max-vertical-offset="1116" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BB/UserBundle/DependencyInjection/BBUserExtension.php">
@@ -621,16 +715,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/views/CRUD/base_list.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.738983" vertical-offset="1026" max-vertical-offset="4482">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.738983" vertical-offset="1026" max-vertical-offset="4482" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/views/CRUD/list.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/views/CRUD/edit.html.twig">
@@ -653,56 +743,24 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.56942004" vertical-offset="324" max-vertical-offset="2160" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Admin/color.form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="26" selection-start="125" selection-end="125" vertical-scroll-proportion="0.15254237" vertical-offset="0" max-vertical-offset="590">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="0" selection-start="1069" selection-end="1069" vertical-scroll-proportion="-13.333333" vertical-offset="162" max-vertical-offset="1368" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.34285715" vertical-offset="0" max-vertical-offset="630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Admin/FlowerAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.37313432" vertical-offset="621" max-vertical-offset="1224">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Admin/ColorAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="1161" selection-end="1212" vertical-scroll-proportion="0.28865978" vertical-offset="714" max-vertical-offset="1296">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="2" selection-start="179" selection-end="179" vertical-scroll-proportion="0.33904108" vertical-offset="0" max-vertical-offset="584">
-          <folding />
-        </state>
+        <state line="47" column="0" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.37313432" vertical-offset="621" max-vertical-offset="1224" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="18" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648">
-          <folding />
-        </state>
+        <state line="30" column="18" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BB/MediaBundle/BBMediaBundle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="1" selection-start="563" selection-end="563" vertical-scroll-proportion="-10.666667" vertical-offset="0" max-vertical-offset="540">
+        <state line="23" column="1" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="666">
           <folding />
         </state>
       </provider>
@@ -714,51 +772,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="37" selection-start="2062" selection-end="2062" vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="2574">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="10" selection-start="1521" selection-end="1521" vertical-scroll-proportion="-17.333334" vertical-offset="198" max-vertical-offset="1080">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BB/MediaBundle/Entity/GalleryHasMedia.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="37" selection-start="483" selection-end="483" vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="720">
-          <folding>
-            <element signature="e#257#330#0" expanded="true" />
-          </folding>
+        <state line="21" column="37" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="846">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="226" column="5" selection-start="4691" selection-end="4691" vertical-scroll-proportion="-131.55556" vertical-offset="426" max-vertical-offset="4950">
+        <state line="226" column="5" selection-start="4691" selection-end="4691" vertical-scroll-proportion="-128.66667" vertical-offset="504" max-vertical-offset="4950">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BB/MediaBundle/Entity/Gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="887" selection-end="1223" vertical-scroll-proportion="-6.2222223" vertical-offset="552" max-vertical-offset="1152">
-          <folding>
-            <element signature="e#257#314#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BB/MediaBundle/Entity/Media.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="32" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.7525773" vertical-offset="534" max-vertical-offset="1152">
+        <state line="33" column="77" selection-start="706" selection-end="706" vertical-scroll-proportion="-15.851851" vertical-offset="40" max-vertical-offset="1152">
           <folding>
             <element signature="e#257#310#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BB/MediaBundle/Entity/Gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="6" selection-start="784" selection-end="784" vertical-scroll-proportion="-12.222222" vertical-offset="228" max-vertical-offset="1134">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/Type/ColorPickerType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="5" selection-start="303" selection-end="303" vertical-scroll-proportion="-10.666667" vertical-offset="0" max-vertical-offset="540">
+          <folding>
+            <element signature="e#6#90#0" expanded="true" />
+            <element signature="e#124#164#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="29" selection-start="1993" selection-end="1994" vertical-scroll-proportion="-6.754717" vertical-offset="524" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="12" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.71428573" vertical-offset="396" max-vertical-offset="2610">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Form/color_picker.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="14" selection-start="218" selection-end="218" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="180">
+          <folding>
+            <element signature="e#152#201#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Color.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="44" selection-start="848" selection-end="848" vertical-scroll-proportion="1.2537314" vertical-offset="0" max-vertical-offset="2664">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/views/CRUD/base_list_flat_inner_row.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Admin/ColorAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="38" selection-start="946" selection-end="946" vertical-scroll-proportion="-13.666667" vertical-offset="189" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/views/CRUD/base_list_flat_field.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="14" selection-start="904" selection-end="904" vertical-scroll-proportion="0.640678" vertical-offset="0" max-vertical-offset="590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/views/CRUD/base_list_field.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.1338983" vertical-offset="79" max-vertical-offset="810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Admin/color.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="37" selection-start="103" selection-end="103" vertical-scroll-proportion="0.06101695" vertical-offset="0" max-vertical-offset="590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="190" selection-end="190" vertical-scroll-proportion="0.3272727" vertical-offset="0" max-vertical-offset="605">
+          <folding />
         </state>
       </provider>
     </entry>

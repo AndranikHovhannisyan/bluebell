@@ -30,7 +30,7 @@ class ColorAdmin extends Admin
         $listMapper
             ->add('id')
             ->add('name')
-            ->add('code')
+            ->add('code', null, array('template' => 'AppBundle:Admin:color.html.twig'))
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -48,7 +48,7 @@ class ColorAdmin extends Admin
     {
         $formMapper
             ->add('name')
-            ->add('code')
+            ->add('code', 'color_picker')
         ;
     }
 

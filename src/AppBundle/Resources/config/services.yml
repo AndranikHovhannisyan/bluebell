@@ -22,3 +22,9 @@ services:
         arguments: [~, AppBundle\Entity\ProductCategory, SonataAdminBundle:CRUD]
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin, label: ProductCategory}
+
+
+    app.form.type.color.picker:
+        class: AppBundle\Form\Type\ColorPickerType
+        tags:
+            - { name: form.type, alias: color_picker }

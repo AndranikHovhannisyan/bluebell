@@ -31,7 +31,7 @@ class Media extends BaseMedia
     protected $id;
 
     /**
-     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Product", mappedBy="gallery")
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Product", mappedBy="media")
      */
     protected $product;
 

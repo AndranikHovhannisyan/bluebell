@@ -1,0 +1,5 @@
+{% block color_picker_widget %}
+    <input type="color" name="{{ form.vars.full_name }}"
+        {% if value %} value="{{ value }}" {% endif %}
+        style="width: 150px; height: 30px; border: none;"/>
+{% endblock %}

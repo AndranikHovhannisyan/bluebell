@@ -39,6 +39,15 @@ class Color
      * @ORM\Column(name="code", type="string", length=10, nullable=false)
      */
     protected $code;
+
+    /**
+     * @return mixed
+     */
+    public function __toString()
+    {
+        return $this->name ? $this->name : '';
+    }
+
     /**
      * Constructor
      */
