@@ -47,6 +47,7 @@ class ProductAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
+            ->add('category')
             ->add('price')
             ->add('discounts')
             ->add('colors')

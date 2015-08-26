@@ -34,6 +34,15 @@ class ProductCategory
      * @ORM\OneToMany(targetEntity="Product", mappedBy="category")
      */
     protected $products;
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->name ? $this->name : '';
+    }
+
     /**
      * Constructor
      */
