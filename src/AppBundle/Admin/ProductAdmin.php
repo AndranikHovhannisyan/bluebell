@@ -48,12 +48,15 @@ class ProductAdmin extends Admin
     {
         $formMapper
             ->add('category')
-            ->add('price')
-            ->add('discounts')
+            ->add('price', 'integer', array('attr' => array('min' => '0')))
+            ->add('discounts', 'integer', array('attr' => array('min' => '0', 'max' => '100'), 'required' => false))
             ->add('colors')
             ->add('flowers')
-            ->add('gallery')
-            ->add('media')
+            ->add('media', 'sonata_type_model_list', array('required' => false), array('link_parameters' => array('context' => 'main_gallery')))
+            ->add('gallery', 'sonata_type_model_list', array ('required' => false), array ('link_parameters' => array ('context' => 'main_gallery')))
+
+//            ->add('gallery', 'sonata_type_model')
+//            ->add('media', 'sonata_type_model')
         ;
     }
 
