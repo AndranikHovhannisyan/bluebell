@@ -30,6 +30,7 @@ class ProductAdmin extends Admin
     {
         $listMapper
             ->add('id')
+            ->add('media', null, array('template' => 'SonataMediaBundle:MediaAdmin:list_image.html.twig'))
             ->add('price')
             ->add('discounts')
             ->add('_action', 'actions', array(
@@ -91,9 +92,7 @@ class ProductAdmin extends Admin
     private function prePersistUpdate($object)
     {
         $em = $this->getConfigurationPool()->getContainer()->get('doctrine')->getManager();
-        $context = $object->getGallery()->getContext();
         $media = $object->getMedia();
-        $media->setContext($context);
 
         if (!$object->getGallery()->hasMedia($media)){
             $galleryHasMedia = new GalleryHasMedia();
