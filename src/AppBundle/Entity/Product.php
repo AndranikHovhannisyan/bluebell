@@ -67,12 +67,6 @@ class Product
     protected $colors;
 
     /**
-     * @ORM\ManyToOne(targetEntity="ProductCategory", inversedBy="products")
-     * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
-     */
-    protected $category;
-
-    /**
      * Constructor
      */
     public function __construct()
@@ -201,29 +195,6 @@ class Product
     public function getColors()
     {
         return $this->colors;
-    }
-
-    /**
-     * Set category
-     *
-     * @param \AppBundle\Entity\ProductCategory $category
-     * @return Product
-     */
-    public function setCategory(\AppBundle\Entity\ProductCategory $category = null)
-    {
-        $this->category = $category;
-
-        return $this;
-    }
-
-    /**
-     * Get category
-     *
-     * @return \AppBundle\Entity\ProductCategory 
-     */
-    public function getCategory()
-    {
-        return $this->category;
     }
 
     /**

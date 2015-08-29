@@ -63,4 +63,19 @@ class Gallery extends BaseGallery
     {
         return $this->product;
     }
+
+    /**
+     * @param $media
+     * @return bool
+     */
+    public function hasMedia($media)
+    {
+        foreach($this->getGalleryHasMedias() as $galleryHasMedia){
+            if ($galleryHasMedia->getMedia()->getId() == $media->getId()){
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

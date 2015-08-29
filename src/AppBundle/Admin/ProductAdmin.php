@@ -2,6 +2,7 @@
 
 namespace AppBundle\Admin;
 
+use BB\MediaBundle\Entity\GalleryHasMedia;
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
@@ -47,16 +48,12 @@ class ProductAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('category')
             ->add('price', 'integer', array('attr' => array('min' => '0')))
             ->add('discounts', 'integer', array('attr' => array('min' => '0', 'max' => '100'), 'required' => false))
             ->add('colors')
             ->add('flowers')
-            ->add('media', 'sonata_type_model_list', array('required' => false), array('link_parameters' => array('context' => 'main_gallery')))
-            ->add('gallery', 'sonata_type_model_list', array ('required' => false), array ('link_parameters' => array ('context' => 'main_gallery')))
-
-//            ->add('gallery', 'sonata_type_model')
-//            ->add('media', 'sonata_type_model')
+            ->add('gallery', 'sonata_type_model_list')
+            ->add('media', 'sonata_type_model_list')
         ;
     }
 
@@ -70,5 +67,40 @@ class ProductAdmin extends Admin
             ->add('price')
             ->add('discounts')
         ;
+    }
+
+    /**
+     * @param mixed $object
+     * @return mixed|void
+     */
+    public function prePersist($object){
+        $this->prePersistUpdate($object);
+    }
+
+    /**
+     * @param mixed $object
+     * @return mixed|void
+     */
+    public function preUpdate($object){
+        $this->prePersistUpdate($object);
+    }
+
+    /**
+     * @param $object
+     */
+    private function prePersistUpdate($object)
+    {
+        $em = $this->getConfigurationPool()->getContainer()->get('doctrine')->getManager();
+        $context = $object->getGallery()->getContext();
+        $media = $object->getMedia();
+        $media->setContext($context);
+
+        if (!$object->getGallery()->hasMedia($media)){
+            $galleryHasMedia = new GalleryHasMedia();
+            $galleryHasMedia->setGallery($object->getGallery());
+            $galleryHasMedia->setMedia($media);
+
+            $em->persist($galleryHasMedia);
+        }
     }
 }

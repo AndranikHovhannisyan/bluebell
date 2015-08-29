@@ -17,13 +17,6 @@ services:
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin, label: Flower}
 
-    app.admin.product_category:
-        class: AppBundle\Admin\ProductCategoryAdmin
-        arguments: [~, AppBundle\Entity\ProductCategory, SonataAdminBundle:CRUD]
-        tags:
-            - {name: sonata.admin, manager_type: orm, group: admin, label: ProductCategory}
-
-
     app.form.type.color.picker:
         class: AppBundle\Form\Type\ColorPickerType
         tags:
