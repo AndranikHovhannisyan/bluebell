@@ -54,7 +54,10 @@ class ProductAdmin extends Admin
             ->add('colors')
             ->add('flowers')
             ->add('gallery', 'sonata_type_model_list')
-            ->add('media', 'sonata_type_model_list')
+            ->add('media', 'sonata_media_type', array(
+                'provider' => 'sonata.media.provider.image',
+                'context'  => 'default'
+            ))
         ;
     }
 

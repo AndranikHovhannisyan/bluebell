@@ -38,6 +38,7 @@ twig:
     strict_variables: "%kernel.debug%"
     form_themes:
           - 'AppBundle:Form:color_picker.html.twig'
+          - 'SonataMediaBundle:Form:media_widgets.html.twig'
 
 # Assetic Configuration
 assetic:

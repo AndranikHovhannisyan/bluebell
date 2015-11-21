@@ -9,15 +9,20 @@
 namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class MainController extends Controller
 {
     /**
      * @Route("/", name="homepage")
+     * @Template
      */
     public function indexAction()
     {
-        return $this->render('default/index.html.twig');
+//        $em = $this->getDoctrine()->getManager();
+//        $media = $em->getRepository('BBMediaBundle:Gallery')->find(5);
+//        return array('media' => $media);
+        return array();
     }
 }
