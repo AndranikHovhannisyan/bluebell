@@ -2,6 +2,7 @@
 
 namespace AppBundle\Admin;
 
+use BB\MediaBundle\Entity\Gallery;
 use BB\MediaBundle\Entity\GalleryHasMedia;
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
@@ -18,6 +19,8 @@ class ProductAdmin extends Admin
     {
         $datagridMapper
             ->add('id')
+            ->add('name')
+            ->add('code')
             ->add('price')
             ->add('discounts')
         ;
@@ -30,6 +33,8 @@ class ProductAdmin extends Admin
     {
         $listMapper
             ->add('id')
+            ->add('name')
+            ->add('code')
             ->add('media', null, array('template' => 'SonataMediaBundle:MediaAdmin:list_image.html.twig'))
             ->add('price')
             ->add('discounts')
@@ -49,14 +54,18 @@ class ProductAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
+            ->add('name')
+            ->add('code')
+            ->add('description', 'textarea', array('required' => false))
             ->add('price', 'integer', array('attr' => array('min' => '0')))
             ->add('discounts', 'integer', array('attr' => array('min' => '0', 'max' => '100'), 'required' => false))
             ->add('colors')
             ->add('flowers')
-            ->add('gallery', 'sonata_type_model_list')
+            ->add('gallery', 'sonata_type_model_list', array('required' => false))
             ->add('media', 'sonata_media_type', array(
                 'provider' => 'sonata.media.provider.image',
-                'context'  => 'default'
+                'context'  => 'default',
+                'required' => false
             ))
         ;
     }
@@ -68,6 +77,9 @@ class ProductAdmin extends Admin
     {
         $showMapper
             ->add('id')
+            ->add('name')
+            ->add('code')
+            ->add('description')
             ->add('price')
             ->add('discounts')
         ;
@@ -96,6 +108,15 @@ class ProductAdmin extends Admin
     {
         $em = $this->getConfigurationPool()->getContainer()->get('doctrine')->getManager();
         $media = $object->getMedia();
+
+        if (!$object->getGallery()){
+            $gallery = new Gallery();
+            $gallery->setName($media->getName());
+            $gallery->setContext('default');
+            $gallery->setDefaultFormat('default_small');
+            $gallery->setEnabled(true);
+            $object->setGallery($gallery);
+        }
 
         if (!$object->getGallery()->hasMedia($media)){
             $galleryHasMedia = new GalleryHasMedia();

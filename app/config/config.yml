@@ -125,16 +125,18 @@ sonata_media:
                 - sonata.media.provider.image
 
             formats:
-                small: { width: 100 , quality: 70}
-                big:   { width: 500 , quality: 70}
+                small:  { width: 100 , quality: 70}
+                medium: { width: 300 , quality: 200}
+                big:    { width: 500 , quality: 400}
 
         composition:
             providers:
                 - sonata.media.provider.image
 
             formats:
-                small: { width: 100 , quality: 70}
-                big:   { width: 500 , quality: 70}
+                small:  { width: 100 , quality: 70}
+                medium: { width: 300 , quality: 200}
+                big:    { width: 500 , quality: 70}
 
         bouquet:
             providers:

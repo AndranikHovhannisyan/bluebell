@@ -27,7 +27,8 @@
         "sonata-project/easy-extends-bundle": "~2.1",
         "sonata-project/media-bundle": "2.3.*",
         "sonata-project/intl-bundle": "2.2.x-dev",
-        "jms/serializer-bundle": "0.13.*"
+        "jms/serializer-bundle": "0.13.*",
+        "knplabs/knp-paginator-bundle": "2.4.*"
 
     },
     "require-dev": {

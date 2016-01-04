@@ -14,7 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @package AppBundle\Entity
  *
  * @ORM\Table(name="product")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Entity\Repository\ProductRepository")
  */
 class Product
 {
@@ -24,6 +24,21 @@ class Product
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+
+    /**
+     * @ORM\Column(name="name", type="string", length=50, nullable=false)
+     */
+    protected $name;
+
+    /**
+     * @ORM\Column(name="code", type="string", length=50, nullable=false)
+     */
+    protected $code;
+
+    /**
+     * @ORM\Column(name="description", type="string", length=500, nullable=true)
+     */
+    protected $description;
 
     /**
      * @ORM\Column(name="price", type="float", nullable=false)
@@ -73,6 +88,14 @@ class Product
     {
         $this->flowers = new \Doctrine\Common\Collections\ArrayCollection();
         $this->colors = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->name ? $this->name : '';
     }
 
     /**
@@ -241,5 +264,74 @@ class Product
     public function getMedia()
     {
         return $this->media;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return Product
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set code
+     *
+     * @param string $code
+     * @return Product
+     */
+    public function setCode($code)
+    {
+        $this->code = $code;
+
+        return $this;
+    }
+
+    /**
+     * Get code
+     *
+     * @return string 
+     */
+    public function getCode()
+    {
+        return $this->code;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Product
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
     }
 }
