@@ -15,7 +15,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class MainController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/", name="index")
      * @Template
      */
     public function indexAction()
@@ -23,6 +23,15 @@ class MainController extends Controller
 //        $em = $this->getDoctrine()->getManager();
 //        $media = $em->getRepository('BBMediaBundle:Gallery')->find(5);
 //        return array('media' => $media);
+        return array();
+    }
+
+    /**
+     * @Route("/homepage", name="homepage")
+     * @Template
+     */
+    public function homepageAction()
+    {
         return array();
     }
 }
