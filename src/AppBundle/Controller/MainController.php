@@ -8,6 +8,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Product;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -45,5 +46,14 @@ class MainController extends Controller
         );
 
         return array('pagination' => $pagination);
+    }
+
+    /**
+     * @Route("/single/{id}", name="single_product")
+     * @Template
+     */
+    public function singleAction(Product $product)
+    {
+        return array('product' => $product);
     }
 }

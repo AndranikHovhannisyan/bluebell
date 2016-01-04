@@ -126,8 +126,8 @@ sonata_media:
 
             formats:
                 small:  { width: 100 , quality: 70}
-                medium: { width: 300 , quality: 200}
-                big:    { width: 500 , quality: 400}
+                medium: { width: 300 , quality: 100}
+                big:    { width: 800 , quality: 100}
 
         composition:
             providers:
@@ -135,24 +135,26 @@ sonata_media:
 
             formats:
                 small:  { width: 100 , quality: 70}
-                medium: { width: 300 , quality: 200}
-                big:    { width: 500 , quality: 70}
+                medium: { width: 300 , quality: 100}
+                big:    { width: 800 , quality: 100}
 
         bouquet:
             providers:
                 - sonata.media.provider.image
 
             formats:
-                small: { width: 100 , quality: 70}
-                big:   { width: 500 , quality: 70}
+                small:  { width: 100 , quality: 70}
+                medium: { width: 300 , quality: 100}
+                big:    { width: 800 , quality: 100}
 
         single_flower:
             providers:
                 - sonata.media.provider.image
 
             formats:
-                small: { width: 100 , quality: 70}
-                big:   { width: 500 , quality: 70}
+                small:  { width: 100 , quality: 70}
+                medium: { width: 300 , quality: 100}
+                big:    { width: 800 , quality: 100}
 
     cdn:
         server:
