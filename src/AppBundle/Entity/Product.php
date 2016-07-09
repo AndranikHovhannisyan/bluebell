@@ -51,18 +51,6 @@ class Product
     protected $discounts;
 
     /**
-     * @ORM\OneToOne(targetEntity="BB\MediaBundle\Entity\Gallery", inversedBy="product")
-     * @ORM\JoinColumn(name="gallery_id", referencedColumnName="id")
-     */
-    protected $gallery;
-
-    /**
-     * @ORM\OneToOne(targetEntity="BB\MediaBundle\Entity\Media", inversedBy="product")
-     * @ORM\JoinColumn(name="media_id", referencedColumnName="id")
-     */
-    protected $media;
-
-    /**
      * @ORM\ManyToMany(targetEntity="Flower", inversedBy="products")
      * @ORM\JoinTable(name="product_flower",
      *      joinColumns={@ORM\JoinColumn(name="flower_id", referencedColumnName="id")},
@@ -70,7 +58,6 @@ class Product
      *      )
      */
     protected $flowers;
-
 
     /**
      * @ORM\ManyToMany(targetEntity="Color", inversedBy="products")
@@ -82,12 +69,18 @@ class Product
     protected $colors;
 
     /**
+     * @ORM\OneToMany(targetEntity="ProductImage", mappedBy="product", cascade={"persist", "remove"})
+     */
+    protected $productImage;
+
+    /**
      * Constructor
      */
     public function __construct()
     {
-        $this->flowers = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->colors = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->flowers      = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->colors       = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->productImage = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -221,52 +214,6 @@ class Product
     }
 
     /**
-     * Set gallery
-     *
-     * @param \BB\MediaBundle\Entity\Gallery $gallery
-     * @return Product
-     */
-    public function setGallery(\BB\MediaBundle\Entity\Gallery $gallery = null)
-    {
-        $this->gallery = $gallery;
-
-        return $this;
-    }
-
-    /**
-     * Get gallery
-     *
-     * @return \BB\MediaBundle\Entity\Gallery 
-     */
-    public function getGallery()
-    {
-        return $this->gallery;
-    }
-
-    /**
-     * Set media
-     *
-     * @param \BB\MediaBundle\Entity\Media $media
-     * @return Product
-     */
-    public function setMedia(\BB\MediaBundle\Entity\Media $media = null)
-    {
-        $this->media = $media;
-
-        return $this;
-    }
-
-    /**
-     * Get media
-     *
-     * @return \BB\MediaBundle\Entity\Media 
-     */
-    public function getMedia()
-    {
-        return $this->media;
-    }
-
-    /**
      * Set name
      *
      * @param string $name
@@ -333,5 +280,38 @@ class Product
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Add productImage
+     *
+     * @param \AppBundle\Entity\ProductImage $productImage
+     * @return Product
+     */
+    public function addProductImage(\AppBundle\Entity\ProductImage $productImage)
+    {
+        $this->productImage[] = $productImage;
+
+        return $this;
+    }
+
+    /**
+     * Remove productImage
+     *
+     * @param \AppBundle\Entity\ProductImage $productImage
+     */
+    public function removeProductImage(\AppBundle\Entity\ProductImage $productImage)
+    {
+        $this->productImage->removeElement($productImage);
+    }
+
+    /**
+     * Get productImage
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getProductImage()
+    {
+        return $this->productImage;
     }
 }

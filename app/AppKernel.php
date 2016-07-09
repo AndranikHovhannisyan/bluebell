@@ -29,14 +29,12 @@ class AppKernel extends Kernel
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
 
             new Sonata\IntlBundle\SonataIntlBundle(),
-            new \Sonata\MediaBundle\SonataMediaBundle(),
 
             new \JMS\SerializerBundle\JMSSerializerBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
 
             new AppBundle\AppBundle(),
-            new BB\UserBundle\BBUserBundle(),
-            new BB\MediaBundle\BBMediaBundle(),
+            new BB\UserBundle\BBUserBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -2,6 +2,7 @@
 
 namespace AppBundle\Admin;
 
+use AppBundle\Entity\ProductImage;
 use BB\MediaBundle\Entity\Gallery;
 use BB\MediaBundle\Entity\GalleryHasMedia;
 use Sonata\AdminBundle\Admin\Admin;
@@ -35,7 +36,6 @@ class ProductAdmin extends Admin
             ->add('id')
             ->add('name')
             ->add('code')
-            ->add('media', null, array('template' => 'SonataMediaBundle:MediaAdmin:list_image.html.twig'))
             ->add('price')
             ->add('discounts')
             ->add('_action', 'actions', array(
@@ -61,12 +61,7 @@ class ProductAdmin extends Admin
             ->add('discounts', 'integer', array('attr' => array('min' => '0', 'max' => '100'), 'required' => false))
             ->add('colors')
             ->add('flowers')
-            ->add('gallery', 'sonata_type_model_list', array('required' => false))
-            ->add('media', 'sonata_media_type', array(
-                'provider' => 'sonata.media.provider.image',
-                'context'  => 'default',
-                'required' => false
-            ))
+            ->add('productImage', 'bb_multiple_file')
         ;
     }
 
@@ -85,45 +80,84 @@ class ProductAdmin extends Admin
         ;
     }
 
-    /**
-     * @param mixed $object
-     * @return mixed|void
-     */
-    public function prePersist($object){
-        $this->prePersistUpdate($object);
-    }
 
-    /**
-     * @param mixed $object
-     * @return mixed|void
-     */
-    public function preUpdate($object){
-        $this->prePersistUpdate($object);
-    }
-
-    /**
-     * @param $object
-     */
-    private function prePersistUpdate($object)
+    public function preUpdate($object)
     {
-        $em = $this->getConfigurationPool()->getContainer()->get('doctrine')->getManager();
-        $media = $object->getMedia();
+        $images = $object->getProductImage();
 
-        if (!$object->getGallery()){
-            $gallery = new Gallery();
-            $gallery->setName($media->getName());
-            $gallery->setContext('default');
-            $gallery->setDefaultFormat('default_small');
-            $gallery->setEnabled(true);
-            $object->setGallery($gallery);
+        if($images) {
+
+            $hasListPhoto = false;
+            $hasCoverPhoto = false;
+
+            foreach($images as $image) {
+                if (!($image instanceof ProductImage)){
+                    $object->removeImage($image);
+                    continue;
+                }
+
+                if ($image->getList() == true){
+                    $hasListPhoto = true;
+                }
+                if ($image->getCover() == true){
+                    $hasCoverPhoto = true;
+                }
+
+                $this->uploadFile($image);
+                $image->setProduct($object);
+                $object->addProductImage($image);
+            }
+
+            if ($object->getProductImage()->first()){
+                if (!$hasListPhoto){
+                    $object->getProductImage()->first()->setList(true);
+                }
+                if (!$hasCoverPhoto){
+                    $object->getProductImage()->first()->setCover(true);
+                }
+            }
+        }
+    }
+
+    public function prePersist($object)
+    {
+        $this->preUpdate($object);
+    }
+
+    private function uploadFile($object)
+    {
+        if (null == $object->getFile()){
+            return;
         }
 
-        if (!$object->getGallery()->hasMedia($media)){
-            $galleryHasMedia = new GalleryHasMedia();
-            $galleryHasMedia->setGallery($object->getGallery());
-            $galleryHasMedia->setMedia($media);
-
-            $em->persist($galleryHasMedia);
+        // check file name
+        if($object->getFileName()){
+            // get file path
+            $path = $object->getAbsolutePath() . $object->getFileName();
+            // check file
+            if(file_exists($path) && is_file($path)){
+                // remove file
+                unlink($path);
+            }
         }
+
+        // get file originalName
+        $object->setFileOriginalName($object->getFile()->getClientOriginalName());
+
+        // get file
+        $path_parts = pathinfo($object->getFile()->getClientOriginalName());
+
+        // generate filename
+        if(!$path_parts['extension']){
+            $extension = $object->getFile()->getMimeType();
+            $extension = substr($extension ,strpos($extension, '/') + 1);
+        }else{
+            $extension = $path_parts['extension'];
+        }
+
+        $object->setFileName(md5(microtime()) . '.' . $extension);
+        $object->setFileSize($object->getFile()->getClientSize());
+        $object->getFile()->move($object->getAbsolutePath(), $object->getFileName());
+        $object->setFile(null);
     }
 }

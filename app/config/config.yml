@@ -38,7 +38,7 @@ twig:
     strict_variables: "%kernel.debug%"
     form_themes:
           - 'AppBundle:Form:color_picker.html.twig'
-          - 'SonataMediaBundle:Form:media_widgets.html.twig'
+          - 'AppBundle:Form:multipleFile.html.twig'
 
 # Assetic Configuration
 assetic:
@@ -110,57 +110,3 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
-
-sonata_media:
-    # if you don't use default namespace configuration
-    class:
-        media: BB\MediaBundle\Entity\Media
-        gallery: BB\MediaBundle\Entity\Gallery
-        gallery_has_media: BB\MediaBundle\Entity\GalleryHasMedia
-    default_context: default
-    db_driver: doctrine_orm # or doctrine_mongodb, doctrine_phpcr
-    contexts:
-        default:
-            providers:
-                - sonata.media.provider.image
-
-            formats:
-                small:  { width: 100 , quality: 70}
-                medium: { width: 300 , quality: 100}
-                big:    { width: 800 , quality: 100}
-
-        composition:
-            providers:
-                - sonata.media.provider.image
-
-            formats:
-                small:  { width: 100 , quality: 70}
-                medium: { width: 300 , quality: 100}
-                big:    { width: 800 , quality: 100}
-
-        bouquet:
-            providers:
-                - sonata.media.provider.image
-
-            formats:
-                small:  { width: 100 , quality: 70}
-                medium: { width: 300 , quality: 100}
-                big:    { width: 800 , quality: 100}
-
-        single_flower:
-            providers:
-                - sonata.media.provider.image
-
-            formats:
-                small:  { width: 100 , quality: 70}
-                medium: { width: 300 , quality: 100}
-                big:    { width: 800 , quality: 100}
-
-    cdn:
-        server:
-            path: /uploads/media # http://media.sonata-project.org/
-
-    filesystem:
-        local:
-            directory:  %kernel.root_dir%/../web/uploads/media
-            create:     false

@@ -1,0 +1,18 @@
+{% extends "SonataAdminBundle:CRUD:base_edit.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    <link rel="stylesheet" href="{{ asset("bundles/app/css/admin-goal.css") }}">
+{% endblock %}
+
+{% block form %}
+    <div data-ng-app="product">
+        {{ block('parentForm') }}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('bundles/app/js/images.js') }}"></script>
+{% endblock %}

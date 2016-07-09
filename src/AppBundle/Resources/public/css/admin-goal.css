@@ -1,0 +1,115 @@
+/* For admin video link */
+
+.relative{
+    position: relative;
+    margin-bottom:10px;
+
+}
+
+.icon{
+    display: inline-block;
+    width: 28px;
+    height:28px;
+    vertical-align: middle;
+    margin-right: 2px;
+}
+
+/*.remove-icon{*/
+    /*background: url('../images/images.png') no-repeat -379px -222px;*/
+    /*position: absolute;*/
+    /*right: 10px;*/
+    /*top: 0;*/
+    /*height: 34px;*/
+/*}*/
+
+.remove-icon{
+    position: absolute;
+    right: 3px;
+    top: 2px;
+    background-color: #ffffff;
+    padding:0 0 0 3px;
+}
+.remove-icon:hover,:focus{
+      text-decoration: none;
+  }
+.remove-icon.icon-remove-video-link{
+    font-size: 25px;
+}
+.relative>iframe {
+    margin: 20px;
+    width: 33%;
+    height: 33%;
+}
+
+.images{
+    padding-left:0;
+    list-style: none;
+}
+
+.images figure{
+    text-align: center;
+    padding:25px 15px  15px;
+    background-color: #f4f4f4;
+    margin: 10px 0 15px;
+}
+
+.images figcaption{
+    padding: 10px 20px 0;
+}
+
+.file-list{
+   margin:10px 0;
+}
+
+.images .delete-link{
+    vertical-align: middle;
+}
+
+.file-list .delete-link{
+    padding:0 25px;
+}
+
+.add-image{
+    clear: both;
+    margin:20px 15px 15px;
+}
+
+.facebook{
+    background: url('../images/facebook_admin.png') no-repeat center center;
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-size: 100%;
+}
+
+.twitter{
+    background: url('../images/twitter_admin.png') no-repeat center center;
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-size: 100%;
+}
+
+.google{
+    background: url('../images/google_admin.png') no-repeat center center;
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-size: 100%;
+}
+
+.android{
+    background: url('../images/android.png') no-repeat center center;
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-size: 100%;
+}
+
+.ios{
+    background: url('../images/ios.png') no-repeat center center;
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-size: 100%;
+}

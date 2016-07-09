@@ -4,6 +4,9 @@ services:
         arguments: [~, AppBundle\Entity\Product, SonataAdminBundle:CRUD]
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin, label: Product}
+        calls:
+            - [ setTemplate, [edit, AppBundle:Admin:product_edit.html.twig]]
+
 
     app.admin.color:
         class: AppBundle\Admin\ColorAdmin
@@ -21,3 +24,8 @@ services:
         class: AppBundle\Form\Type\ColorPickerType
         tags:
             - { name: form.type, alias: color_picker }
+
+    app.form.type.multiple.file:
+        class: AppBundle\Form\Type\BBMultipleFileType
+        tags:
+            - { name: form.type, alias: bb_multiple_file }
