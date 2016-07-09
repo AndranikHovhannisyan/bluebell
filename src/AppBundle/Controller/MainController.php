@@ -33,8 +33,22 @@ class MainController extends Controller
      */
     public function homepageAction(Request $request, $type = 'all')
     {
+        switch($type){
+            case 'bucket':
+                $type = Product::BUCKET;
+                break;
+            case 'composition':
+                $type = Product::COMPOSITION;
+                break;
+            case 'single-flower':
+                $type = Product::SINGLE;
+                break;
+            default:
+                $type = null;
+        }
+
         $em = $this->getDoctrine()->getManager();
-        $products = $em->getRepository('AppBundle:Product')->findAllProducts();
+        $products = $em->getRepository('AppBundle:Product')->findAllProducts($type);
 
         $paginate  = $this->get('knp_paginator');
         // generate pagination
@@ -83,5 +97,23 @@ class MainController extends Controller
         }
 
         return new Response();
+    }
+
+    /**
+     * @Route("/about-us", name="about")
+     * @Template
+     */
+    public function aboutAction()
+    {
+        return [];
+    }
+
+    /**
+     * @Route("/contact-us", name="contact")
+     * @Template
+     */
+    public function contactAction()
+    {
+        return [];
     }
 }

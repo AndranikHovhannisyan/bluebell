@@ -13,14 +13,16 @@ use Doctrine\ORM\EntityRepository;
 class ProductRepository extends EntityRepository
 {
     /**
+     * @param $type
      * @return \Doctrine\ORM\Query
      */
-    public function findAllProducts()
+    public function findAllProducts($type)
     {
         return  $this->getEntityManager()
             ->createQuery("SELECT p, i
                            FROM AppBundle:Product p
-                           LEFT JOIN p.productImage i")
-            ;
+                           LEFT JOIN p.productImage i
+                           WHERE :type IS NULL OR p.type = :type")
+            ->setParameter('type', $type);
     }
 }

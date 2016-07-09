@@ -26,13 +26,9 @@ class Builder implements ContainerAwareInterface
         $menu['Home']->addChild('Single Flower', array('route' => 'homepage', 'routeParameters' => ['type' => 'single-flower']));
 
 
-//
-//        // create another menu item
-//        $menu->addChild('About Me', array('route' => 'about'));
-//        // you can also add sub level's to your menu's as follows
-//        $menu['About Me']->addChild('Edit profile', array('route' => 'edit_profile'));
+        $menu->addChild('Contact Us', array('route' => 'contact'));
+        $menu->addChild('About', array('route' => 'about'));
 
-        // ... add more children
 
         return $menu;
     }
