@@ -33,6 +33,8 @@ class AppKernel extends Kernel
             new \JMS\SerializerBundle\JMSSerializerBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
 
+            new Liip\ImagineBundle\LiipImagineBundle(),
+
             new AppBundle\AppBundle(),
             new BB\UserBundle\BBUserBundle()
         );

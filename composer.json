@@ -28,7 +28,9 @@
         "sonata-project/media-bundle": "2.3.*",
         "sonata-project/intl-bundle": "2.2.x-dev",
         "jms/serializer-bundle": "0.13.*",
-        "knplabs/knp-paginator-bundle": "2.4.*"
+        "knplabs/knp-paginator-bundle": "2.4.*",
+        "liip/imagine-bundle" : "1.5.*",
+        "knplabs/knp-menu-bundle": "^2.0"
 
     },
     "require-dev": {

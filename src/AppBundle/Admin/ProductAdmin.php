@@ -2,9 +2,8 @@
 
 namespace AppBundle\Admin;
 
+use AppBundle\Entity\Product;
 use AppBundle\Entity\ProductImage;
-use BB\MediaBundle\Entity\Gallery;
-use BB\MediaBundle\Entity\GalleryHasMedia;
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
@@ -54,6 +53,11 @@ class ProductAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
+            ->add('type', 'choice', ['choices' => [
+                Product::BUCKET => 'Bucket',
+                Product::COMPOSITION => 'Composition',
+                Product::SINGLE => 'Single flower'
+            ] ])
             ->add('name')
             ->add('code')
             ->add('description', 'textarea', array('required' => false))
@@ -92,7 +96,7 @@ class ProductAdmin extends Admin
 
             foreach($images as $image) {
                 if (!($image instanceof ProductImage)){
-                    $object->removeImage($image);
+                    $object->removeProductImage($image);
                     continue;
                 }
 

@@ -21,3 +21,6 @@ _sonata_admin:
 sonata_user:
     resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
     prefix: /admin
+
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"

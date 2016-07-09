@@ -2,11 +2,14 @@
 
 {% block content %}
     <div id="page">
-        {% thumbnail product.media, 'big' with {'width': '300'} %}
 
-        {% for galleryHasMedia in product.gallery.galleryHasMedias %}
-            {% thumbnail galleryHasMedia, 'small' %}
+        <img src="{{ product.listPhotoDownloadLink | imagine_filter('product_list') }}" />
+
+        {% for productImage in product.productImage %}
+            <img src="{{ product.listPhotoDownloadLink | imagine_filter('product_small') }}" />
         {% endfor %}
+
+
         <div id="sidebar">
             <ul>
                 <li>

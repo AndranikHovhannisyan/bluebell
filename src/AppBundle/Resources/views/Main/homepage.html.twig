@@ -20,7 +20,7 @@
 
             <div id="column{{ counter }}">
                 <h2>{{ product.name }}</h2>
-                {% thumbnail product.media, 'medium' with {'width': '300'} %}
+                <img src="{{ product.listPhotoDownloadLink | imagine_filter('product_list') }}" />
                 <p>{{ product.description }}</p>
                 <p class="button"><a href="{{ path('single_product', {id: product.id}) }}">Read More</a></p>
             </div>

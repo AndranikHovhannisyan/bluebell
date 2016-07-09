@@ -18,6 +18,10 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Product
 {
+    const BUCKET      = 0;
+    const COMPOSITION = 1;
+    const SINGLE      = 2;
+
     /**
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -72,6 +76,11 @@ class Product
      * @ORM\OneToMany(targetEntity="ProductImage", mappedBy="product", cascade={"persist", "remove"})
      */
     protected $productImage;
+
+    /**
+     * @ORM\Column(name="type", type="smallint", nullable=false)
+     */
+    protected $type = self::BUCKET;
 
     /**
      * Constructor
@@ -313,5 +322,39 @@ class Product
     public function getProductImage()
     {
         return $this->productImage;
+    }
+
+    /**
+     * @return null
+     */
+    public function getListPhotoDownloadLink()
+    {
+        foreach($this->getProductImage() as $image){
+            if ($image->getList()){
+                return $image->getDownloadLink();
+            }
+        }
+
+        if ($this->getProductImage()->first()){
+            return $this->getProductImage()->getDownloadLink();
+        }
+
+        return null;
+    }
+
+    /**
+     * @param mixed $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 }

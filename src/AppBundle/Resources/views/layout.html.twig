@@ -28,15 +28,16 @@
                         </a>
                     {#</h1>#}
                 </div>
-                <div id="menu">
-                    <ul>
-                        <li class="current_page_item"><a href="#">Homepage</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
+                {{ knp_menu_render('AppBundle:Builder:mainMenu') }}
+                {#<div id="menu">#}
+                    {#<ul>#}
+                        {#<li class="current_page_item"><a href="#">Homepage</a></li>#}
+                        {#<li><a href="#">Services</a></li>#}
+                        {#<li><a href="#">Portfolio</a></li>#}
+                        {#<li><a href="#">About</a></li>#}
+                        {#<li><a href="#">Contact</a></li>#}
+                    {#</ul>#}
+                {#</div>#}
             </div>
         {% endblock %}
     </div>

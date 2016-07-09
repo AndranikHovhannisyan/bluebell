@@ -24,17 +24,14 @@ class MainController extends Controller
      */
     public function indexAction()
     {
-//        $em = $this->getDoctrine()->getManager();
-//        $media = $em->getRepository('BBMediaBundle:Gallery')->find(5);
-//        return array('media' => $media);
         return array();
     }
 
     /**
-     * @Route("/homepage", name="homepage")
+     * @Route("/homepage/{type}", requirements={"type"="all|bucket|composition|single-flower"}, defaults={"type"="all"}, name="homepage")
      * @Template
      */
-    public function homepageAction(Request $request)
+    public function homepageAction(Request $request, $type = 'all')
     {
         $em = $this->getDoctrine()->getManager();
         $products = $em->getRepository('AppBundle:Product')->findAllProducts();
@@ -58,6 +55,7 @@ class MainController extends Controller
     {
         return array('product' => $product);
     }
+
 
     /**
      * @Route("/product-image/remove/{id}", name="remove_product_image")

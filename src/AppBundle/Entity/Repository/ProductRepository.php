@@ -18,9 +18,9 @@ class ProductRepository extends EntityRepository
     public function findAllProducts()
     {
         return  $this->getEntityManager()
-            ->createQuery("SELECT p
+            ->createQuery("SELECT p, i
                            FROM AppBundle:Product p
-                           LEFT JOIN p.media m")
+                           LEFT JOIN p.productImage i")
             ;
     }
 }
