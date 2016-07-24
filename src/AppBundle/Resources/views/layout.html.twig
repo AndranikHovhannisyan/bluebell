@@ -1,51 +1,28 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+{% extends "::base.html.twig" %}
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>{% block title %}Bluebell{% endblock %}</title>
+{% block header %}
+    <div id="header" class="container">
+        <div id="logo">
+            {#<h1>#}
+            <br/><br/>
+                <a href="{{ path('homepage') }}">
+                    <strong class="logo-font">Bluebell</strong>
+                </a>
+            {#</h1>#}
+        </div>
+        <div id="menu">
+            {{ knp_menu_render('AppBundle:Builder:mainMenu') }}
 
-    {% block stylesheets %}
-        <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
-        <link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
-        <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-        <link href="{{ asset('bundles/app/css/style.css') }}" rel="stylesheet" type="text/css" media="screen" />
-    {% endblock %}
-</head>
-<body>
-
-<div id="wrapper">
-    <div id="header-wrapper">
-        {% block header %}
-            <div id="header" class="container">
-                <div id="logo">
-                    {#<h1>#}
-                    <br/><br/>
-                        <a href="{{ path('homepage') }}">
-                            <strong class="logo-font">Bluebell</strong>
-                        </a>
-                    {#</h1>#}
-                </div>
-                <div id="menu">
-                    {{ knp_menu_render('AppBundle:Builder:mainMenu') }}
-
-                    {#<ul>#}
-                        {#<li class="current_page_item"><a href="#">Homepage</a></li>#}
-                        {#<li><a href="#">Services</a></li>#}
-                        {#<li><a href="#">Portfolio</a></li>#}
-                        {#<li><a href="#">About</a></li>#}
-                        {#<li><a href="#">Contact</a></li>#}
-                    {#</ul>#}
-                </div>
-            </div>
-        {% endblock %}
+            {#<ul>#}
+                {#<li class="current_page_item"><a href="#">Homepage</a></li>#}
+                {#<li><a href="#">Services</a></li>#}
+                {#<li><a href="#">Portfolio</a></li>#}
+                {#<li><a href="#">About</a></li>#}
+                {#<li><a href="#">Contact</a></li>#}
+            {#</ul>#}
+        </div>
     </div>
-
-    {% block content %}{% endblock %}
-
-</div>
+{% endblock %}
 
 {% block footer %}
     {#<div id="footer-content-wrapper">#}
@@ -86,5 +63,3 @@
         <p>&copy; Untitled. All rights reserved. Images by <a href="http://fotogrph.com/">Fotogrph</a>. Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
     </div>
 {% endblock %}
-</body>
-</html>
