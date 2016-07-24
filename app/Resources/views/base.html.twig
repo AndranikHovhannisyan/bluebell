@@ -7,16 +7,17 @@
             <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
             <link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
             <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-
+            <link href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" media="screen"/>
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body {% block AngularCtrl %} data-ng-controller="MainCtrl" {% endblock %}>
 
-        <div id="wrapper">
+        <div id="wrapper" class="container">
             <div id="header-wrapper">
                 {% block header %}{% endblock %}
             </div>
+
             {% block content %}{% endblock %}
         </div>
 

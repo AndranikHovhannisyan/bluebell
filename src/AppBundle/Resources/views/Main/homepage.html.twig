@@ -3,8 +3,8 @@
 {% block stylesheets %}
     {{ parent() }}
 
-    <link href="{{ asset('bundles/app/css/style.css') }}" rel="stylesheet" type="text/css" media="screen"/>
-    <link href="{{ asset('bundles/app/css/list_item.css') }}" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="{{ asset('bundles/app/css/style.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('bundles/app/css/list_item.css') }}" rel="stylesheet" type="text/css"/>
 
 {% endblock %}
 
@@ -18,7 +18,11 @@
 {% endblock %}
 
 {% block content %}
-
+    <div class="row">
+        <div class="col-sm-4">Span1</div>
+        <div class="col-sm-4">Span2</div>
+        <div class="col-sm-4">Span3</div>
+    </div>
 {% endblock %}
 
 {% block javascripts %}
