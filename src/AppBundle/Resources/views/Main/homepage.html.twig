@@ -11,17 +11,32 @@
 {% block header %}
     {{ parent() }}
 
-    <div id="banner">
-        <div class="content"><img src="{{ asset('bundles/app/pictures/main.jpg') }}" width="1000" height="500" alt="" /></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <img src="{{ asset('bundles/app/pictures/main.jpg') }}" class="img-responsive"/>
+            </div>
+        </div>
     </div>
 
 {% endblock %}
 
 {% block content %}
-    <div class="row">
-        <div class="col-sm-4">Span1</div>
-        <div class="col-sm-4">Span2</div>
-        <div class="col-sm-4">Span3</div>
+    <div class="container">
+        <div id="list" class="row">
+            <div class="col-sm-4 item">
+                <img src="/uploads/files/9087453c3c6b482c13dd83979cbd48e8.png" class="img-responsive"/>
+            </div>
+
+            <div class="col-sm-4 item">
+                <img src="/uploads/files/9087453c3c6b482c13dd83979cbd48e8.png" class="img-responsive"/>
+            </div>
+
+            <div class="col-sm-4 item">
+                <img src="/uploads/files/9087453c3c6b482c13dd83979cbd48e8.png" class="img-responsive"/>
+            </div>
+
+        </div>
     </div>
 {% endblock %}
 

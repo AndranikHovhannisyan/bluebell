@@ -13,10 +13,8 @@
     </head>
     <body {% block AngularCtrl %} data-ng-controller="MainCtrl" {% endblock %}>
 
-        <div id="wrapper" class="container">
-            <div id="header-wrapper">
-                {% block header %}{% endblock %}
-            </div>
+        <div class="container">
+            {% block header %}{% endblock %}
 
             {% block content %}{% endblock %}
         </div>
