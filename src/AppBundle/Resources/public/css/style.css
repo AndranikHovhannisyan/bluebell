@@ -96,6 +96,19 @@ a:hover {
 	padding: 0;
 }
 
+#main-text {
+    position: relative;
+    margin-top: 20px;
+}
+
+#main-text p {
+    text-align: center;
+    font-family: 'Great Vibes', Helvetica, sans-serif;
+    color: white;
+    font-size: 60px;
+    text-shadow: 0 0 14px #484848;
+}
+
 /* Logo */
 
 #logo {
