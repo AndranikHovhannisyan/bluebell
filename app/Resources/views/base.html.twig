@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html {% block AngularApp %} data-ng-app="main" {% endblock %}>
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
@@ -11,16 +11,16 @@
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
-    <body>
+    <body {% block AngularCtrl %} data-ng-controller="MainCtrl" {% endblock %}>
 
-    <div id="wrapper">
-        <div id="header-wrapper">
-            {% block header %}{% endblock %}
+        <div id="wrapper">
+            <div id="header-wrapper">
+                {% block header %}{% endblock %}
+            </div>
+            {% block content %}{% endblock %}
         </div>
-        {% block content %}{% endblock %}
-    </div>
 
-    {% block footer %}{% endblock %}
+        {% block footer %}{% endblock %}
 
         {% block javascripts %}
 

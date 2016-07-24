@@ -1,6 +1,5 @@
 {% extends 'AppBundle::layout.html.twig' %}
 
-
 {% block header %}
     {{ parent() }}
 
@@ -12,71 +11,12 @@
 
 {% block content %}
 
-    {%  set counter = 1 %}
-    {% for product in pagination %}
-        {% if counter == 1 %}
-            <div id="featured-content">
-        {% endif %}
+{% endblock %}
 
-            <div id="column{{ counter }}">
-                <h2>{{ product.name }}</h2>
-                <img src="{{ product.listPhotoDownloadLink | imagine_filter('product_list') }}" />
-                <p>{{ product.description }}</p>
-                <p class="button"><a href="{{ path('single_product', {id: product.id}) }}">Read More</a></p>
-            </div>
+{% block javascripts %}
+    {{ parent() }}
 
-        {% if counter == 3 %}
-                </div>
-                {% set counter = 1 %}
-            {% else %}
-                {% set counter = counter + 1 %}
-            {% endif %}
-    {% endfor %}
-
-    {% if counter != 1 %}
-        </div>
-    {% endif %}
-
-    {#<div id="column2">#}
-        {#<h2>Fusce fringilla</h2>#}
-        {#<p><img src="images/img07.jpg" width="300" height="150" alt="" /></p>#}
-        {#<p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem. Mauris quam enim, molestie.</p>#}
-        {#<p class="button"><a href="#">Read More</a></p>#}
-    {#</div>#}
-
-    <div id="page">
-        <div class="navigation">
-            {{ knp_pagination_render(pagination) }}
-        </div>
-        {#<div id="content">#}
-            {#<div class="post">#}
-                {#<h2 class="title"><a href="#">Welcome to ColoreGiallo </a></h2>#}
-                {#<div class="entry">#}
-                    {#<p>This is <strong>ColoreGiallo</strong>, a free, fully standards-compliant CSS template designed by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.   The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>#}
-                    {#<p class="links"><a href="#" class="more">Read More</a><a href="#" title="b0x" class="comments">Comments</a></p>#}
-                {#</div>#}
-            {#</div>#}
-        {#</div>#}
-        {#<!-- end #content -->#}
-        {#<div id="sidebar">#}
-            {#<ul>#}
-                {#<li>#}
-                    {#<h2>Categories</h2>#}
-                    {#<ul>#}
-                        {#<li><a href="#">Aliquam libero</a></li>#}
-                        {#<li><a href="#">Consectetuer adipiscing elit</a></li>#}
-                        {#<li><a href="#">Metus aliquam pellentesque</a></li>#}
-                        {#<li><a href="#">Suspendisse iaculis mauris</a></li>#}
-                        {#<li><a href="#">Urnanet non molestie semper</a></li>#}
-                        {#<li><a href="#">Proin gravida orci porttitor</a></li>#}
-                    {#</ul>#}
-                {#</li>#}
-            {#</ul>#}
-        {#</div>#}
-        {#<!-- end #sidebar -->#}
-        {#<div style="clear: both;">&nbsp;</div>#}
-    </div>
-
+    <script src="{{ asset('bundles/app/js/angular/main.js') }}" type="text/javascript"></script>
 
 {% endblock %}
 
