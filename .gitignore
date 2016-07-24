@@ -10,5 +10,7 @@
 /vendor/
 /web/bundles/
 /web/uploads/
+/web/media/
+/web/bower_components/
 .idea/
 *~
