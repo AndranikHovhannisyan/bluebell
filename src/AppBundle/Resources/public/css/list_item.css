@@ -1,7 +1,36 @@
 #list {
-    margin-top: 20px;
+    margin-top: 200px;
 }
 
 #list .item {
     padding: 15px;
+}
+
+#list .item-footer {
+    box-shadow: 0 0 4px #c5c5c5;
+    padding: 0 12px;
+}
+
+#list .item-footer div {
+    padding-top: 15px;
+}
+
+#list .item-title {
+}
+
+#list .item-description {
+    height: 96px;
+    overflow: hidden;
+}
+
+#list .item-read-more {
+    padding: 20px 0 !important;
+}
+
+#list .item-read-more a {
+    padding: 10px 15px;
+    background-color: #ff8d8d;
+    color: white;
+    text-shadow: 0 1px 1px #9e6666;
+    border-radius: 4px;
 }
