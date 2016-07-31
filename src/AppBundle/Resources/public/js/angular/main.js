@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('main', [])
-  .controller('MainCtrl', ['$scope', function($scope){
+  .controller('MainCtrl', ['$scope', '$timeout', function($scope, $timeout){
     console.log("hello Ctrl");
 
     angular.element('.category1').select2({
@@ -12,7 +12,16 @@ angular.module('main', [])
 
     });
     angular.element('.category3').select2({
-      placeholder: "Գույներ"
+      placeholder: "Գույներ",
+      templateResult: function (item) {
+        if (!item.id) { return item.text; }
+        return $('<p>'+item.text+'<span class="color" style="background-color: red"></span></p>');
+      },
+      templateSelection: function(item){
+        if (!item.id) { return item.text; }
+        return $('<span>'+item.text+'<span class="color" style="background-color: red"></span></span>');
+
+      }
 
     });
   }]);
