@@ -108,7 +108,7 @@ a:hover {
     text-shadow: 0 0 14px #484848;
 }
 
-.contacts {
+#contacts {
     position: relative;
     float: right;
     text-align: center;
@@ -117,10 +117,14 @@ a:hover {
     margin-top: -240px;
 }
 
-.contacts p {
+#contacts p {
     margin-bottom: 0;
 }
 
+#filters {
+    position: relative;
+    padding: 0 15px;
+}
 /* Logo */
 
 #logo {
