@@ -125,6 +125,12 @@ a:hover {
     position: relative;
     padding: 0 15px;
 }
+
+#filters .select2 {
+    opacity: 0.6;
+    vertical-align: top;
+}
+
 /* Logo */
 
 #logo {
