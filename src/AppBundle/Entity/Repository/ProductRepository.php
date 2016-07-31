@@ -25,4 +25,14 @@ class ProductRepository extends EntityRepository
                            WHERE :type IS NULL OR p.type = :type")
             ->setParameter('type', $type);
     }
+
+    public function findAllByFilters($first, $count)
+    {
+        return $this->getEntityManager()
+            ->createQuery("SELECT p
+                           FROM AppBundle:Product p")
+            ->setFirstResult($first)
+            ->setMaxResults($count)
+            ->getResult();
+    }
 }

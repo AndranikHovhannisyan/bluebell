@@ -8,6 +8,8 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation\Groups;
+use JMS\Serializer\Annotation\VirtualProperty;
 
 /**
  * Class Product
@@ -26,31 +28,37 @@ class Product
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
+     * @Groups({"product"})
      */
     protected $id;
 
     /**
      * @ORM\Column(name="name", type="string", length=50, nullable=false)
+     * @Groups({"product"})
      */
     protected $name;
 
     /**
      * @ORM\Column(name="code", type="string", length=50, nullable=false)
+     * @Groups({"product"})
      */
     protected $code;
 
     /**
      * @ORM\Column(name="description", type="string", length=500, nullable=true)
+     * @Groups({"product"})
      */
     protected $description;
 
     /**
      * @ORM\Column(name="price", type="float", nullable=false)
+     *  @Groups({"product"})
      */
     protected $price;
 
     /**
      * @ORM\Column(name="discounts", type="float", nullable=true)
+     * @Groups({"product"})
      */
     protected $discounts;
 
@@ -326,6 +334,8 @@ class Product
 
     /**
      * @return null
+     * @VirtualProperty
+     * @Groups({"product"})
      */
     public function getListPhotoDownloadLink()
     {

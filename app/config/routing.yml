@@ -24,3 +24,8 @@ sonata_user:
 
 _liip_imagine:
     resource: "@LiipImagineBundle/Resources/config/routing.xml"
+
+app_product_rest:
+    type:     rest
+    resource: @AppBundle/Controller/Rest/ProductController.php
+    prefix:   /
