@@ -24,8 +24,20 @@ class ProductController extends FOSRestController
     public function postAction($first, $count)
     {
         $em = $this->getDoctrine()->getManager();
-        $product = $em->getRepository('AppBundle:Product')->findAllByFilters($first, $count);
+        $products = $em->getRepository('AppBundle:Product')->findAllByFilters($first, $count);
 
-        return $product;
+        $liipManager = $this->get('liip_imagine.cache.manager');
+
+        foreach($products as $product){
+            if ($product->getListPhotoDownloadLink()) {
+                try {
+                    $product->setCachedImage($liipManager->getBrowserPath($product->getListPhotoDownloadLink(), 'product_list'));
+                } catch (\Exception $e) {
+                    $product->setCachedImage($product->getListPhotoDownloadLink());
+                }
+            }
+        }
+
+        return $products;
     }
 }

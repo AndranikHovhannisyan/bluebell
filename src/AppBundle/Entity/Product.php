@@ -91,6 +91,11 @@ class Product
     protected $type = self::BUCKET;
 
     /**
+     * @Groups({"product"})
+     */
+    protected $cachedImage;
+
+    /**
      * Constructor
      */
     public function __construct()
@@ -116,6 +121,22 @@ class Product
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @param mixed $cachedImage
+     */
+    public function setCachedImage($cachedImage)
+    {
+        $this->cachedImage = $cachedImage;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCachedImage()
+    {
+        return $this->cachedImage;
     }
 
     /**
