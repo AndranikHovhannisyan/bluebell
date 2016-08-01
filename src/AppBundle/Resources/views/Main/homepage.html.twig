@@ -21,10 +21,6 @@
             <p>E-mail: bluebell-flowers@mail.ru</p>
         </div>
 
-
-        {{ dump(flowers) }}
-        {{ dump(colors) }}
-
         <div class="row" data-ng-init="initFlowers('{{ flowers }}');initColors('{{ colors }}')">
             <div class="col-sm-10 col-sm-offset-1" id="filters">
                 <md-chips ng-model="products.selected" md-require-match="true" md-max-chips="5">

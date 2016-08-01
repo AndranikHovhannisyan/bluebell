@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('main', ['ngMaterial', 'ngAnimate'])
-  .config(["$interpolateProvider",function($interpolateProvider){
+  .config(["$interpolateProvider", function($interpolateProvider){
     $interpolateProvider.startSymbol("[[");
     $interpolateProvider.endSymbol("]]");
   }])
-  .controller('MainCtrl', ['$scope', '$q', function($scope, $q){
+  .controller('MainCtrl', ['$scope', '$q', '$http', function($scope, $q, $http){
     console.log($scope, "hello Ctrl");
 
     $scope.products = {
@@ -74,5 +74,26 @@ angular.module('main', ['ngMaterial', 'ngAnimate'])
 
       return deferred.promise;
     };
+
+    $scope.$watch('[products.selected, flowers.selected, colors.selected]', function(){
+      $scope.doFilter();
+    }, true);
+
+    $scope.doFilter = function(){
+      var post = {
+        products: $scope.products.selected,
+        flowers: $scope.flowers.selected,
+        colors: $scope.colors.selected
+      };
+
+      $http({
+        method: 'POST',
+        url: '/api/v1.0/products/0/10',
+        data: post
+      }).success(function(res){
+        console.log(res);
+      })
+
+    }
 
   }]);

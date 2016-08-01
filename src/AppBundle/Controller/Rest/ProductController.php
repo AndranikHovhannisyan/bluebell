@@ -18,10 +18,10 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 class ProductController extends FOSRestController
 {
     /**
-     * @Rest\Get("/products/{first}/{count}", requirements={"first"="\d+", "count"="\d+"}, name="get_product", options={"method_prefix"=false})
+     * @Rest\Post("/products/{first}/{count}", requirements={"first"="\d+", "count"="\d+"}, name="get_product", options={"method_prefix"=false})
      * @Rest\View(serializerGroups={"product"})
      */
-    public function getAction($first, $count)
+    public function postAction($first, $count)
     {
         $em = $this->getDoctrine()->getManager();
         $product = $em->getRepository('AppBundle:Product')->findAllByFilters($first, $count);
