@@ -1,12 +1,52 @@
 'use strict';
 
-angular.module('main', ['ngMaterial', 'ngAnimate'])
-  .config(["$interpolateProvider", function($interpolateProvider){
+angular.module('main', ['ngMaterial', 'ngAnimate', 'infinite-scroll'])
+  .config(function($interpolateProvider){
     $interpolateProvider.startSymbol("[[");
     $interpolateProvider.endSymbol("]]");
+  })
+  .service('InfiniteItems',['$http', function($http){
+    var InfiniteItems = function(loadCount) {
+      this.items = [];
+      this.busy = false;
+      this.start = 0;
+      this.count = loadCount ? loadCount : 7;
+    };
+
+    InfiniteItems.prototype.reset = function(){
+      this.items = [];
+      this.busy = false;
+      this.start = 0;
+    };
+
+    InfiniteItems.prototype.nextItems = function(post, params){
+      if(this.busy){
+        return;
+      }
+
+      this.busy = true;
+
+      $http({
+        method: 'POST',
+        url: '/api/v1.0/products/' + this.start + '/' + this.count,
+        data: post,
+        params: params
+      }).success(function(res){
+        console.log(res);
+
+        this.busy = res.length ? false : true;
+        this.items = this.items.concat(res);
+        this.start += this.count;
+
+        }.bind(this));
+    };
+
+    return InfiniteItems
   }])
-  .controller('MainCtrl', ['$scope', '$q', '$http', function($scope, $q, $http){
+  .controller('MainCtrl', ['$scope', '$q', 'InfiniteItems', function($scope, $q, InfiniteItems){
     console.log($scope, "hello Ctrl");
+
+    $scope.InfiniteItems = new InfiniteItems(9);
 
     $scope.products = {
       selected: [],
@@ -80,19 +120,14 @@ angular.module('main', ['ngMaterial', 'ngAnimate'])
     }, true);
 
     $scope.doFilter = function(){
-      var post = {
+      $scope.post = {
         products: $scope.products.selected,
         flowers: $scope.flowers.selected,
         colors: $scope.colors.selected
       };
 
-      $http({
-        method: 'POST',
-        url: '/api/v1.0/products/0/10',
-        data: post
-      }).success(function(res){
-        console.log(res);
-      })
+      $scope.InfiniteItems.reset();
+      $scope.InfiniteItems.nextItems($scope.post);
 
     }
 

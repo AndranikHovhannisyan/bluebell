@@ -70,125 +70,22 @@
             </div>
         </div>
 
-        <div id="list" class="row">
-            <div class="col-sm-4 item">
+        <div id="list" class="row"
+             infinite-scroll="InfiniteItems.nextItems(post)"
+             infinite-scroll-disabled="InfiniteItems.busy"
+             infinite-scroll-distance="3">
+            <div class="col-sm-4 item" data-ng-repeat="item in InfiniteItems.items">
                 <div>
-                    <img src="/uploads/files/0839a5fe1de10ac65ebc87075289d6ac.jpg" class="img-responsive"/>
+                    <img data-ng-src="[[ item.list_photo_download_link ]]" class="img-responsive"/>
                 </div>
                 <div class="item-footer">
                     <div class="item-title">
-                        <h3>Flowers</h3>
+                        <h3>[[ item.name ]]
+                            <span style="float:right;color:#e81515">[[ item.price | number ]]</span>
+                        </h3>
                     </div>
                     <div class="item-description">
-                        Vestibulum sed ex tortor. Nam vehicula mauris odio,
-                        interdum risus posuere sed.
-                        Pellentesque elit nisi, rutrum in nibh a,
-                        porta tempor mi.
-                    </div>
-
-                    <div class="item-read-more">
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4 item">
-                <div>
-                    <img src="/uploads/files/0839a5fe1de10ac65ebc87075289d6ac.jpg" class="img-responsive"/>
-                </div>
-                <div class="item-footer">
-                    <div class="item-title">
-                        <h3>Flowers</h3>
-                    </div>
-                    <div class="item-description">
-                        Vestibulum sed ex tortor. Nam vehicula mauris odio,
-                        interdum risus posuere sed.
-                        Pellentesque elit nisi, rutrum in nibh a,
-                        porta tempor mi.
-                    </div>
-
-                    <div class="item-read-more">
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4 item">
-                <div>
-                    <img src="/uploads/files/0839a5fe1de10ac65ebc87075289d6ac.jpg" class="img-responsive"/>
-                </div>
-                <div class="item-footer">
-                    <div class="item-title">
-                        <h3>Flowers</h3>
-                    </div>
-                    <div class="item-description">
-                        Vestibulum sed ex tortor. Nam vehicula mauris odio,
-                        interdum risus posuere sed.
-                        Pellentesque elit nisi, rutrum in nibh a,
-                        porta tempor mi.
-                    </div>
-
-                    <div class="item-read-more">
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4 item">
-                <div>
-                    <img src="/uploads/files/0839a5fe1de10ac65ebc87075289d6ac.jpg" class="img-responsive"/>
-                </div>
-                <div class="item-footer">
-                    <div class="item-title">
-                        <h3>Flowers</h3>
-                    </div>
-                    <div class="item-description">
-                        Vestibulum sed ex tortor. Nam vehicula mauris odio,
-                        interdum risus posuere sed.
-                        Pellentesque elit nisi, rutrum in nibh a,
-                        porta tempor mi.
-                    </div>
-
-                    <div class="item-read-more">
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4 item">
-                <div>
-                    <img src="/uploads/files/0839a5fe1de10ac65ebc87075289d6ac.jpg" class="img-responsive"/>
-                </div>
-                <div class="item-footer">
-                    <div class="item-title">
-                        <h3>Flowers</h3>
-                    </div>
-                    <div class="item-description">
-                        Vestibulum sed ex tortor. Nam vehicula mauris odio,
-                        interdum risus posuere sed.
-                        Pellentesque elit nisi, rutrum in nibh a,
-                        porta tempor mi.
-                    </div>
-
-                    <div class="item-read-more">
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4 item">
-                <div>
-                    <img src="/uploads/files/0839a5fe1de10ac65ebc87075289d6ac.jpg" class="img-responsive"/>
-                </div>
-                <div class="item-footer">
-                    <div class="item-title">
-                        <h3>Flowers</h3>
-                    </div>
-                    <div class="item-description">
-                        Vestibulum sed ex tortor. Nam vehicula mauris odio,
-                        interdum risus posuere sed.
-                        Pellentesque elit nisi, rutrum in nibh a,
-                        porta tempor mi.
+                        [[ item.description ]]
                     </div>
 
                     <div class="item-read-more">
