@@ -22,36 +22,38 @@
         </div>
 
 
-        {#{{ dump(flowers) }}#}
-        {#{{ dump(colors) }}#}
+        {{ dump(flowers) }}
+        {{ dump(colors) }}
 
-        {% verbatim %}
-            <div class="row">
-                <div class="col-sm-10 col-sm-offset-1" id="filters">
-                    <md-chips ng-model="fruitNames" name="fruitName" readonly="ctrl.readonly" md-max-chips="5">
-                        <md-chip-template>
-                            <strong>{{ $chip }}</strong>
-                            <em>( fruit )</em>
-                        </md-chip-template>
-                    </md-chips>
+        <div class="row" data-ng-init="initFlowers('{{ flowers }}');initColors('{{ colors }}')">
+            <div class="col-sm-10 col-sm-offset-1" id="filters">
+                {#<md-chips ng-model="test" name="fruitName" md-max-chips="5">#}
+                    {#<md-chip-template>#}
+                        {#<strong>[[ $chip.name ]]</strong>#}
+                    {#</md-chip-template>#}
+                {#</md-chips>#}
 
-                    <md-chips ng-model="fruitNames" name="fruitName" readonly="ctrl.readonly" md-max-chips="5">
-                        <md-chip-template>
-                            <strong>{{ $chip }}</strong>
-                            <em>( type )</em>
-                        </md-chip-template>
-                    </md-chips>
+                <md-chips ng-model="flowers.selected" md-require-match="true" md-max-chips="5">
+                    <md-autocomplete
+                        md-search-text="searchFlower"
+                        md-items="item in getFlowers(searchFlower)"
+                        md-item-text="item.name"
+                        placeholder="Flowers">
+                        <span md-highlight-text="searchTag">[[ item.name ]]</span>
+                    </md-autocomplete>
 
-                    <md-chips ng-model="fruitNames" name="fruitName" readonly="ctrl.readonly" md-max-chips="5">
-                        <md-chip-template>
-                            <strong>{{ $chip }}</strong>
-                            <em>( color )</em>
-                        </md-chip-template>
-                    </md-chips>
+                    <md-chip-template>
+                        <strong>[[ $chip.name ]]</strong>
+                    </md-chip-template>
+                </md-chips>
 
-                </div>
+                {#<md-chips ng-model="fruitNames" name="fruitName" md-max-chips="5">#}
+                    {#<md-chip-template>#}
+                        {#<strong>[[ $chip ]]</strong>#}
+                    {#</md-chip-template>#}
+                {#</md-chips>#}
             </div>
-        {% endverbatim %}
+        </div>
 
         <div id="list" class="row">
             <div class="col-sm-4 item">

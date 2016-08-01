@@ -39,10 +39,9 @@ class MainController extends Controller
         $colors = $em->getRepository('AppBundle:Color')->findAll();
 
         $serializer = $this->get('serializer');
-        $serializer->serialize($flowers, SerializationContext::create()->setGroups(['flower']));
-        $serializer->serialize($colors, SerializationContext::create()->setGroups(['color']));
+        $flowers = $serializer->serialize($flowers, 'json', SerializationContext::create()->setGroups(['flower']));
+        $colors = $serializer->serialize($colors, 'json', SerializationContext::create()->setGroups(['color']));
 
-        dump($flowers); exit;
 
         return [
             'flowers' => $flowers,
