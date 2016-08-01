@@ -8,6 +8,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation\Groups;
 
 /**
  * Class Color
@@ -22,11 +23,13 @@ class Color
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
+     * @Groups({"color"})
      */
     protected $id;
 
     /**
      * @ORM\Column(name="name", type="string", length=25, nullable=false)
+     * @Groups({"color"})
      */
     protected $name;
 
@@ -37,6 +40,7 @@ class Color
 
     /**
      * @ORM\Column(name="code", type="string", length=10, nullable=false)
+     * @Groups({"color"})
      */
     protected $code;
 

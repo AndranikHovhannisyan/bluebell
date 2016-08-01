@@ -8,6 +8,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation\Groups;
 
 /**
  * Class Flower
@@ -22,11 +23,13 @@ class Flower
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
+     * @Groups({"flower"})
      */
     protected $id;
 
     /**
      * @ORM\Column(name="name", type="string", length=25, nullable=false)
+     * @Groups({"flower"})
      */
     protected $name;
 

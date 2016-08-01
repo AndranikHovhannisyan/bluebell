@@ -123,7 +123,13 @@ a:hover {
 
 #filters {
     position: relative;
-    padding: 0 15px;
+    padding: 20px;
+    /*background: rgba(0, 0, 0, 0.18);*/
+}
+
+#filters md-chips-wrap{
+    background: rgba(0, 0, 0, 0.18);
+    margin:0 0 15px;
 }
 
 #filters .select2 {

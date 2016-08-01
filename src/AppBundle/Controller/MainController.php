@@ -10,6 +10,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Product;
 use AppBundle\Entity\ProductImage;
+use JMS\Serializer\SerializationContext;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -28,37 +29,25 @@ class MainController extends Controller
     }
 
     /**
-     * @Route("/homepage/{type}", requirements={"type"="all|bucket|composition|single-flower"}, defaults={"type"="all"}, name="homepage")
+     * @Route("/homepage", name="homepage")
      * @Template
      */
     public function homepageAction(Request $request, $type = 'all')
     {
-        switch($type){
-            case 'bucket':
-                $type = Product::BUCKET;
-                break;
-            case 'composition':
-                $type = Product::COMPOSITION;
-                break;
-            case 'single-flower':
-                $type = Product::SINGLE;
-                break;
-            default:
-                $type = null;
-        }
-
         $em = $this->getDoctrine()->getManager();
-        $products = $em->getRepository('AppBundle:Product')->findAllProducts($type);
+        $flowers = $em->getRepository('AppBundle:Flower')->findAll();
+        $colors = $em->getRepository('AppBundle:Color')->findAll();
 
-        $paginate  = $this->get('knp_paginator');
-        // generate pagination
-        $pagination = $paginate->paginate(
-            $products,
-            $request->query->getInt('page', 1),
-           3
-        );
+        $serializer = $this->get('serializer');
+        $serializer->serialize($flowers, SerializationContext::create()->setGroups(['flower']));
+        $serializer->serialize($colors, SerializationContext::create()->setGroups(['color']));
 
-        return array('pagination' => $pagination);
+        dump($flowers); exit;
+
+        return [
+            'flowers' => $flowers,
+            'colors' => $colors
+        ];
     }
 
     /**
@@ -97,23 +86,5 @@ class MainController extends Controller
         }
 
         return new Response();
-    }
-
-    /**
-     * @Route("/about-us", name="about")
-     * @Template
-     */
-    public function aboutAction()
-    {
-        return [];
-    }
-
-    /**
-     * @Route("/contact-us", name="contact")
-     * @Template
-     */
-    public function contactAction()
-    {
-        return [];
     }
 }
