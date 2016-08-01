@@ -21,23 +21,18 @@
             <p>E-mail: bluebell-flowers@mail.ru</p>
         </div>
 
-        <div id="filters" class="row">
-            <select class="category1 filter col-sm-3" multiple="multiple">
-                <option>dededed</option>
-                <option>dededed</option>
-                <option>dededed</option>
-            </select>
-            <select class="category2 filter col-sm-3" multiple="multiple">
-                <option>dededed dde</option>
-                <option>dededed</option>
-                <option>dededed gggt</option>
-            </select>
-            <select class="category3 filter col-sm-3" multiple="multiple">
-                <option>ewef dededed</option>
-                <option>rofn dwieuhdyweb</option>
-                <option>dw;odhewub iwehduiewb </option>
-            </select>
-        </div>
+        {% verbatim %}
+            <div id="filters" class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <md-chips ng-model="fruitNames" name="fruitName" readonly="ctrl.readonly" md-max-chips="5">
+                        <md-chip-template>
+                            <strong>{{ $chip }}</strong>
+                            <em>( fruit )</em>
+                        </md-chip-template>
+                    </md-chips>
+                </div>
+            </div>
+        {% endverbatim %}
 
         <div id="list" class="row">
             <div class="col-sm-4 item">
