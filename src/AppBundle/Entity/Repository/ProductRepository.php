@@ -3,6 +3,7 @@
 namespace AppBundle\Entity\Repository;
 
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
  * ProductRepository
@@ -26,13 +27,53 @@ class ProductRepository extends EntityRepository
             ->setParameter('type', $type);
     }
 
-    public function findAllByFilters($first, $count)
+    /**
+     * @param $first
+     * @param $count
+     * @param $types
+     * @param $flowers
+     * @param $colors
+     * @return array
+     */
+    public function findAllByFilters($first, $count, $types = null, $flowers = null, $colors = null)
     {
-        return $this->getEntityManager()
-            ->createQuery("SELECT p
-                           FROM AppBundle:Product p")
+        $query = $this->getEntityManager()
+            ->createQueryBuilder()
+            ->select("p")
+            ->from("AppBundle:Product", "p")
             ->setFirstResult($first)
             ->setMaxResults($count)
-            ->getResult();
+        ;
+
+        if (!is_null($types) && count($types) != 0){
+            $query
+                ->andWhere('p.type IN (:types)')
+                ->setParameter('types', $types);
+        }
+
+        if (!is_null($flowers) && count($flowers) != 0){
+
+            $flowerIds = array_column($flowers, 'id');
+
+            $query
+                ->join('p.flowers', 'f')
+                ->andWhere('f.id IN (:flowerIds)')
+                ->setParameter('flowerIds', $flowerIds);
+        }
+
+        if (!is_null($colors) && count($colors) != 0){
+
+            $colorIds = array_column($colors, 'id');
+
+            $query
+                ->join('p.colors', 'c')
+                ->andWhere('c.id IN (:colorIds)')
+                ->setParameter('colorIds', $colorIds);
+        }
+
+
+
+        $paginator = new Paginator($query, $fetchJoinCollection = true);
+        return $paginator->getIterator()->getArrayCopy();
     }
 }

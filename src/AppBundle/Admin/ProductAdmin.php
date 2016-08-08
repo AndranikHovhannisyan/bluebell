@@ -36,7 +36,13 @@ class ProductAdmin extends Admin
             ->add('name')
             ->add('code')
             ->add('price')
-            ->add('discounts')
+            ->add('type', 'choice', ['choices' => [
+                Product::BUCKET => 'Bucket',
+                Product::COMPOSITION => 'Composition',
+                Product::SINGLE => 'Single flower'
+            ] ])
+            ->add('colors')
+            ->add('flowers')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),

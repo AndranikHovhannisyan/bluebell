@@ -50,16 +50,6 @@ class MainController extends Controller
     }
 
     /**
-     * @Route("/single/{id}", name="single_product")
-     * @Template
-     */
-    public function singleAction(Product $product)
-    {
-        return array('product' => $product);
-    }
-
-
-    /**
      * @Route("/product-image/remove/{id}", name="remove_product_image")
      */
     public function removeProductImageAcrion(ProductImage $productImage, Request $request)

@@ -7,8 +7,10 @@
  */
 namespace AppBundle\Controller\Rest;
 
+use AppBundle\Entity\Product;
 use FOS\RestBundle\Controller\FOSRestController;
 use FOS\RestBundle\Controller\Annotations as Rest;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
 /**
@@ -21,10 +23,32 @@ class ProductController extends FOSRestController
      * @Rest\Post("/products/{first}/{count}", requirements={"first"="\d+", "count"="\d+"}, name="get_product", options={"method_prefix"=false})
      * @Rest\View(serializerGroups={"product"})
      */
-    public function postAction($first, $count)
+    public function postAction(Request $request, $first, $count)
     {
+        $content = $request->getContent();
+        $request->request->add(json_decode($content, true));
+
+        $colors  = $request->get('colors');
+        $flowers = $request->get('flowers');
+        $rawTypes   = $request->get('products');
+
+        $types = [];
+        foreach($rawTypes as $rawType){
+            switch ($rawType) {
+                case "Bucket":
+                    $types[] = Product::BUCKET;
+                    break;
+                case "Composition":
+                    $types[] = Product::COMPOSITION;
+                    break;
+                case "Single Flower":
+                    $types[] = Product::SINGLE;
+                    break;
+            }
+        }
+
         $em = $this->getDoctrine()->getManager();
-        $products = $em->getRepository('AppBundle:Product')->findAllByFilters($first, $count);
+        $products = $em->getRepository('AppBundle:Product')->findAllByFilters($first, $count, $types, $flowers, $colors);
 
         $liipManager = $this->get('liip_imagine.cache.manager');
 
