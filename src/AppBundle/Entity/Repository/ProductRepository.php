@@ -37,16 +37,18 @@ class ProductRepository extends EntityRepository
      */
     public function findAllByFilters($first, $count, $types = null, $flowers = null, $colors = null)
     {
-        $query = $this->getEntityManager()
+        $idQuery = $this->getEntityManager()
             ->createQueryBuilder()
-            ->select("p")
+            ->select("DISTINCT p.id")
             ->from("AppBundle:Product", "p")
+            ->join('p.flowers', 'f')
+            ->where('NOT EXISTS (SELECT f1.id FROM AppBundle:Product p1 LEFT JOIN p1.flowers f1 WHERE f1.isExists = false AND p1.id = p.id)')
             ->setFirstResult($first)
             ->setMaxResults($count)
         ;
 
         if (!is_null($types) && count($types) != 0){
-            $query
+            $idQuery
                 ->andWhere('p.type IN (:types)')
                 ->setParameter('types', $types);
         }
@@ -55,8 +57,7 @@ class ProductRepository extends EntityRepository
 
             $flowerIds = array_column($flowers, 'id');
 
-            $query
-                ->join('p.flowers', 'f')
+            $idQuery
                 ->andWhere('f.id IN (:flowerIds)')
                 ->setParameter('flowerIds', $flowerIds);
         }
@@ -65,15 +66,24 @@ class ProductRepository extends EntityRepository
 
             $colorIds = array_column($colors, 'id');
 
-            $query
+            $idQuery
                 ->join('p.colors', 'c')
                 ->andWhere('c.id IN (:colorIds)')
                 ->setParameter('colorIds', $colorIds);
         }
 
+        $ids = $idQuery->getQuery()->getResult();
 
+        if (count($ids) == 0){
+            return [];
+        }
 
-        $paginator = new Paginator($query, $fetchJoinCollection = true);
-        return $paginator->getIterator()->getArrayCopy();
+        return $this->getEntityManager()
+            ->createQuery("SELECT p, i
+                           FROM AppBundle:Product p
+                           JOIN p.productImage i
+                           WHERE p.id IN (:ids)")
+            ->setParameter('ids', $ids)
+            ->getResult();
     }
 }

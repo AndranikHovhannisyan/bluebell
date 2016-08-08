@@ -15,7 +15,7 @@ use JMS\Serializer\Annotation\Groups;
  * @package AppBundle\Entity
  *
  * @ORM\Table(name="flower")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Entity\Repository\FlowerRepository")
  */
 class Flower
 {
@@ -39,6 +39,11 @@ class Flower
     protected $products;
 
     /**
+     * @ORM\Column(name="is_exists", type="boolean", nullable=true)
+     */
+    protected $isExists = true;
+
+    /**
      * @return string
      */
     public function __toString()
@@ -52,6 +57,22 @@ class Flower
     public function __construct()
     {
         $this->products = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIsExists()
+    {
+        return $this->isExists;
+    }
+
+    /**
+     * @param mixed $isExists
+     */
+    public function setIsExists($isExists)
+    {
+        $this->isExists = $isExists;
     }
 
     /**

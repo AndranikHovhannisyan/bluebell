@@ -28,7 +28,7 @@ angular.module('main', ['ngMaterial', 'ngAnimate', 'infinite-scroll'])
 
       $http({
         method: 'POST',
-        url: '/api/v1.0/products/' + this.start + '/' + this.count,
+        url: '/app_dev.php/api/v1.0/products/' + this.start + '/' + this.count,
         data: post,
         params: params
       }).success(function(res){

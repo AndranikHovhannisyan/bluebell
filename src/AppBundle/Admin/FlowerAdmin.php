@@ -18,6 +18,7 @@ class FlowerAdmin extends Admin
         $datagridMapper
             ->add('id')
             ->add('name')
+            ->add('isExists')
         ;
     }
 
@@ -29,6 +30,7 @@ class FlowerAdmin extends Admin
         $listMapper
             ->add('id')
             ->add('name')
+            ->add('isExists', null, array('editable' => true))
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -46,6 +48,7 @@ class FlowerAdmin extends Admin
     {
         $formMapper
             ->add('name')
+            ->add('isExists')
         ;
     }
 
@@ -57,6 +60,7 @@ class FlowerAdmin extends Admin
         $showMapper
             ->add('id')
             ->add('name')
+            ->add('isExists')
         ;
     }
 }

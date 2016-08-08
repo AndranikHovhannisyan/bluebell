@@ -35,7 +35,7 @@ class MainController extends Controller
     public function homepageAction(Request $request, $type = 'all')
     {
         $em = $this->getDoctrine()->getManager();
-        $flowers = $em->getRepository('AppBundle:Flower')->findAll();
+        $flowers = $em->getRepository('AppBundle:Flower')->findAllExists();
         $colors = $em->getRepository('AppBundle:Color')->findAll();
 
         $serializer = $this->get('serializer');
