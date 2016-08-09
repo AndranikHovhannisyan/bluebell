@@ -25,7 +25,7 @@
             <div class="col-sm-10 col-sm-offset-1" id="filters">
                 <md-chips ng-model="products.selected" md-require-match="true" md-max-chips="5">
                     <md-autocomplete
-                        md-min-length="0"
+                        md-min-length="1"
                         md-search-text="searchProduct"
                         md-items="item in getProducts(searchProduct)"
                         md-item-text="item"
@@ -40,7 +40,7 @@
 
                 <md-chips ng-model="flowers.selected" md-require-match="true" md-max-chips="5">
                     <md-autocomplete
-                        md-min-length="0"
+                        md-min-length="1"
                         md-search-text="searchFlower"
                         md-items="item in getFlowers(searchFlower)"
                         md-item-text="item.name"
@@ -55,7 +55,7 @@
 
                 <md-chips ng-model="colors.selected" md-require-match="true" md-max-chips="5">
                     <md-autocomplete
-                        md-min-length="0"
+                        md-min-length="1"
                         md-search-text="searchColor"
                         md-items="item in getColors(searchColor)"
                         md-item-text="item.name"
