@@ -52,14 +52,15 @@
                         <strong>[[ $chip.name ]]</strong>
                     </md-chip-template>
                 </md-chips>
-
+            </div>
+            <div class="col-sm-8 col-sm-offset-1" id="filters" style="padding-top: 0">
                 <md-chips ng-model="colors.selected" md-require-match="true" md-max-chips="5">
                     <md-autocomplete
-                        md-min-length="1"
-                        md-search-text="searchColor"
-                        md-items="item in getColors(searchColor)"
-                        md-item-text="item.name"
-                        placeholder="Colors">
+                            md-min-length="1"
+                            md-search-text="searchColor"
+                            md-items="item in getColors(searchColor)"
+                            md-item-text="item.name"
+                            placeholder="Colors">
                         <span md-highlight-text="searchColor">[[ item.name ]]</span>
                     </md-autocomplete>
 
@@ -67,6 +68,9 @@
                         <strong>[[ $chip.name ]]</strong>
                     </md-chip-template>
                 </md-chips>
+            </div>
+            <div class="col-sm-2">
+                <md-button id="search" data-ng-click="doFilter()">Search</md-button>
             </div>
         </div>
 

@@ -126,20 +126,21 @@ angular.module('main', ['ngMaterial', 'ngAnimate', 'infinite-scroll', 'ngDialog'
       return deferred.promise;
     };
 
-    $scope.$watch('[products.selected, flowers.selected, colors.selected]', function(){
-      $scope.doFilter();
-    }, true);
+//    $scope.$watch('[products.selected, flowers.selected, colors.selected]', function(){
+//      $scope.doFilter();
+//    }, true);
 
     $scope.doFilter = function(){
       $scope.post = {
-        products: $scope.products.selected,
-        flowers: $scope.flowers.selected,
-        colors: $scope.colors.selected
+        products: $scope.products ? $scope.products.selected : null,
+        flowers: $scope.flowers ? $scope.flowers.selected : null,
+        colors: $scope.colors ? $scope.colors.selected : null
       };
 
       $scope.InfiniteItems.reset();
       $scope.InfiniteItems.nextItems($scope.post);
 
-    }
+    };
 
+    $scope.doFilter();
   }]);
