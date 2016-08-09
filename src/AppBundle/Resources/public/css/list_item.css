@@ -27,6 +27,16 @@
 
 #list .item-read-more {
     padding: 20px 0 !important;
+    width: 102px;
+    display: inline-block;
+}
+
+#list .item-price {
+    float: right;
+    color: #e81515;
+    font-size: 30px;
+    margin-top: 8px;
+    font-family: sans-serif;
 }
 
 #list .item-read-more a {

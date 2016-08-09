@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('main', ['ngMaterial', 'ngAnimate', 'infinite-scroll'])
+angular.module('main', ['ngMaterial', 'ngAnimate', 'infinite-scroll', 'ngDialog'])
   .config(function($interpolateProvider){
     $interpolateProvider.startSymbol("[[");
     $interpolateProvider.endSymbol("]]");
