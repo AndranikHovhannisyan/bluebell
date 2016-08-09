@@ -74,7 +74,9 @@
              infinite-scroll="InfiniteItems.nextItems(post)"
              infinite-scroll-disabled="InfiniteItems.busy"
              infinite-scroll-distance="3">
-            <div class="col-sm-4 item items-animate" data-ng-repeat="item in InfiniteItems.items">
+            <div class="col-sm-4 item items-animate"
+                 data-ng-click="openPopup(item)"
+                 data-ng-repeat="item in InfiniteItems.items">
                 <div>
                     <img data-ng-src="[[ item.cached_image ]]" class="img-responsive"/>
                 </div>
@@ -99,6 +101,11 @@
 
 {% block javascripts %}
     {{ parent() }}
+
+    <script type="text/ng-template" id="templateId">
+        <h1>Template heading</h1>
+        <p>Content goes here</p>
+    </script>
 
     <script src="{{ asset('bundles/app/js/angular/main.js') }}" type="text/javascript"></script>
 

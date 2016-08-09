@@ -43,7 +43,11 @@ angular.module('main', ['ngMaterial', 'ngAnimate', 'infinite-scroll', 'ngDialog'
 
     return InfiniteItems
   }])
-  .controller('MainCtrl', ['$scope', '$q', 'InfiniteItems', function($scope, $q, InfiniteItems){
+  .controller('MainCtrl', ['$scope',
+    '$q',
+    'InfiniteItems',
+    'ngDialog',
+    function($scope, $q, InfiniteItems, ngDialog){
     console.log($scope, "hello Ctrl");
 
     $scope.InfiniteItems = new InfiniteItems(9);
@@ -65,6 +69,13 @@ angular.module('main', ['ngMaterial', 'ngAnimate', 'infinite-scroll', 'ngDialog'
         selected: [],
         items: angular.fromJson(colors)
       };
+    };
+
+    $scope.openPopup = function(item){
+      console.log(item);
+      ngDialog.open({
+        template: 'templateId'
+      });
     };
 
     $scope.getProducts = function(q){
