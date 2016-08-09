@@ -19,7 +19,9 @@
 }
 
 #list .item-description {
-    height: 96px;
+    height: 95px;
+    min-height: 95px;
+    max-height: 95px;
     overflow: hidden;
 }
 
@@ -33,4 +35,31 @@
     color: white;
     text-shadow: 0 1px 1px #9e6666;
     border-radius: 4px;
+}
+
+/* animation */
+.items.ng-enter,
+.items-animate.ng-leave{
+    -webkit-transition: 200ms ease-out all;
+    -moz-transition: 200ms ease-out all;
+    -ms-transition: 200ms ease-out all;
+    -o-transition: 200ms ease-out all;
+    transition: 200ms ease-out all;
+    position: relative;
+    display: block;
+}
+.items-animate.ng-enter-stagger{
+    transition-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+.items-animate.ng-leave.items-animate.ng-leave-active,
+.items-animate.ng-enter {
+    opacity: 0;
+    top: 100px;
+}
+
+.items-animate.ng-enter.items-animate.ng-enter-active,
+.items-animate.ng-leave {
+    opacity: 1;
+    top: 0;
 }
