@@ -70,11 +70,11 @@
             </div>
         </div>
 
-        <div id="list" class="row items items-animate"
+        <div id="list" class="row"
              infinite-scroll="InfiniteItems.nextItems(post)"
              infinite-scroll-disabled="InfiniteItems.busy"
              infinite-scroll-distance="3">
-            <div class="col-sm-4 item" data-ng-repeat="item in InfiniteItems.items">
+            <div class="col-sm-4 item items-animate" data-ng-repeat="item in InfiniteItems.items">
                 <div>
                     <img data-ng-src="[[ item.cached_image ]]" class="img-responsive"/>
                 </div>
