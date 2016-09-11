@@ -623,3 +623,7 @@ ul.style1 .first {
     text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
 }
 
+.ngdialog-theme-default {
+    padding-top: 20px !important;
+}
+

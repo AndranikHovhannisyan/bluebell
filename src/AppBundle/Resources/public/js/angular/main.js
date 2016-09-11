@@ -32,7 +32,6 @@ angular.module('main', ['ngMaterial', 'ngAnimate', 'infinite-scroll', 'ngDialog'
         data: post,
         params: params
       }).success(function(res){
-        console.log(res);
 
         this.busy = res.length ? false : true;
         this.items = this.items.concat(res);
@@ -48,7 +47,6 @@ angular.module('main', ['ngMaterial', 'ngAnimate', 'infinite-scroll', 'ngDialog'
     'InfiniteItems',
     'ngDialog',
     function($scope, $q, InfiniteItems, ngDialog){
-    console.log($scope, "hello Ctrl");
 
     $scope.InfiniteItems = new InfiniteItems(9);
 
@@ -72,9 +70,35 @@ angular.module('main', ['ngMaterial', 'ngAnimate', 'infinite-scroll', 'ngDialog'
     };
 
     $scope.openPopup = function(item){
-      console.log(item);
       ngDialog.open({
-        template: 'templateId'
+        template: '/bundles/app/htmls/list_item.html',
+        controller: function($scope, item, $timeout){
+            $scope.item = item;
+
+            $timeout(function(){
+                var galleryTop = new Swiper('.gallery-top', {
+                    nextButton: '.swiper-button-next',
+                    prevButton: '.swiper-button-prev',
+                    spaceBetween: 10
+                });
+                var galleryThumbs = new Swiper('.gallery-thumbs', {
+                    spaceBetween: 10,
+                    centeredSlides: true,
+                    slidesPerView: 'auto',
+                    touchRatio: 0.2,
+                    slideToClickedSlide: true
+                });
+                galleryTop.params.control = galleryThumbs;
+                galleryThumbs.params.control = galleryTop;
+
+            }, 100);
+        },
+        resolve: {
+          item: function(){
+            return item;
+          }
+        },
+        width: 760
       });
     };
 

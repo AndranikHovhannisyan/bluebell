@@ -76,3 +76,7 @@ html.ngdialog-open {
     opacity: 1;
     top: 0;
 }
+
+.item-footer .min-height-62 {
+    min-height: 62px !important;
+}
