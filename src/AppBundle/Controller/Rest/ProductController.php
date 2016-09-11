@@ -21,7 +21,7 @@ class ProductController extends FOSRestController
 {
     /**
      * @Rest\Post("/products/{first}/{count}", requirements={"first"="\d+", "count"="\d+"}, name="get_product", options={"method_prefix"=false})
-     * @Rest\View(serializerGroups={"product"})
+     * @Rest\View(serializerGroups={"product", "product_image", "productImage"})
      */
     public function postAction(Request $request, $first, $count)
     {

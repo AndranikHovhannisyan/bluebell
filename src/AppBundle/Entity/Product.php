@@ -82,6 +82,7 @@ class Product
 
     /**
      * @ORM\OneToMany(targetEntity="ProductImage", mappedBy="product", cascade={"persist", "remove"})
+     * @Groups({"product_image"})
      */
     protected $productImage;
 

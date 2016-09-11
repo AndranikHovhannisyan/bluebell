@@ -98,7 +98,7 @@ angular.module('main', ['ngMaterial', 'ngAnimate', 'infinite-scroll', 'ngDialog'
             return item;
           }
         },
-        width: 760
+        width: 780
       });
     };
 

@@ -1,50 +1,65 @@
-<div class="swiper-container gallery-top">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/1)"></div>
-        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/2)"></div>
-        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/3)"></div>
-        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/4)"></div>
-        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/5)"></div>
-        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/6)"></div>
-        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/7)"></div>
-        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/8)"></div>
-        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/10)"></div>
+<div class="container" style="width: 760px">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="swiper-container gallery-top">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/1)"></div>
+                    <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/2)"></div>
+                    <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/3)"></div>
+                    <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/4)"></div>
+                    <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/5)"></div>
+                    <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/6)"></div>
+                    <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/7)"></div>
+                    <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/8)"></div>
+                    <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/10)"></div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev swiper-button-white"></div>
+            </div>
+            <div class="swiper-container gallery-thumbs">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/1)"></div>
+                    <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/2)"></div>
+                    <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/3)"></div>
+                    <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/4)"></div>
+                    <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/5)"></div>
+                    <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/6)"></div>
+                    <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/7)"></div>
+                    <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/8)"></div>
+                    <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/10)"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h4 class="dialog-item-title center">[[ item.name ]]</h4>
+            <p class="dialog-item-code">Կոդ: #[[ item.code ]]</p>
+            <p class="dialog-item-description">[[ item.description ]]</p>
+            <p class="dialog-item-price">[[ item.price ]]<span style="font-size: 20px">֏</span></p>
+        </div>
     </div>
-    <!-- Add Arrows -->
-    <div class="swiper-button-next swiper-button-white"></div>
-    <div class="swiper-button-prev swiper-button-white"></div>
 </div>
-<div class="swiper-container gallery-thumbs">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/1)"></div>
-        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/2)"></div>
-        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/3)"></div>
-        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/4)"></div>
-        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/5)"></div>
-        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/6)"></div>
-        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/7)"></div>
-        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/8)"></div>
-        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/1200/1200/nature/10)"></div>
-    </div>
-</div>
-
 <style>
+    .swiper-container {
+        margin: 0 !important;
+    }
     .swiper-slide {
         background-size: cover;
         background-position: center;
     }
     .gallery-top {
-        width: 700px;
+        width: 500px;
         height: 400px;
     }
 
     .gallery-thumbs {
         height: 100px;
+        width: 500px;
         box-sizing: border-box;
         padding: 10px 0;
     }
     .gallery-thumbs .swiper-slide {
-        width: 20%;
+        width: 25%;
         height: 100px;
         opacity: 0.5;
     }
@@ -52,4 +67,29 @@
         opacity: 1;
     }
 
+    .center {
+        text-align: center;
+    }
+
+    .dialog-item-code {
+        font-size: 16px;
+        margin-top: 60px;
+    }
+
+    .dialog-item-description {
+        font-size: 16px;
+        line-height: 19px;
+        min-height: 300px;
+    }
+
+    .dialog-item-price {
+        float: right;
+        color: #e81515;
+        font-size: 38px;
+        font-family: sans-serif;
+    }
+
+    .dialog-item-title {
+        font-size: 21px;
+    }
 </style>
