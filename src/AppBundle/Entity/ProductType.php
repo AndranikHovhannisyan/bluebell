@@ -2,7 +2,11 @@
 
 namespace AppBundle\Entity;
 
+use AppBundle\Traits\File;
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation\Groups;
+use JMS\Serializer\Annotation\VirtualProperty;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Class ProductType
@@ -12,17 +16,30 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class ProductType
 {
+    use File;
+
     /**
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
+     * @Groups({"productType"})
      */
     protected $id;
 
     /**
      * @ORM\Column(name="name", type="string", length=50, nullable=false)
+     * @Groups({"productType"})
      */
     protected $name;
+
+    /**
+     * @VirtualProperty
+     * @Groups({"productType"})
+     */
+    public function getPhotoDownloadLink()
+    {
+        return $this->getDownloadLink();
+    }
 
     /**
      * @return string

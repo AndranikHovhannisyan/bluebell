@@ -1,0 +1,7 @@
+{% block picture_widget %}
+
+    {{ form_widget(form) }}
+    <br />
+
+    <img width="260" src="{{ asset(form.parent.vars.value.downloadLink) }}" alt="child.vars.value.filename">
+{% endblock %}

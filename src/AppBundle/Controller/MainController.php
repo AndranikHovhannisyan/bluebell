@@ -29,6 +29,18 @@ class MainController extends Controller
     }
 
     /**
+     * @Route("/home", name="home")
+     * @Template
+     */
+    public function homeAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $productTypes = $em->getRepository('AppBundle:ProductType')->findAll();
+
+        return array('productTypes' => $productTypes);
+    }
+
+    /**
      * @Route("/homepage", name="homepage")
      * @Template
      */

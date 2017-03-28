@@ -49,4 +49,15 @@ class ProductController extends FOSRestController
 
         return $products;
     }
+
+    /**
+     * @Rest\View(serializerGroups={"productType"})
+     */
+    public function getTypesAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $productTypes = $em->getRepository('AppBundle:ProductType')->findAll();
+
+        return $productTypes;
+    }
 }

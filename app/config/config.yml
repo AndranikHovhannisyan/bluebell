@@ -39,6 +39,7 @@ twig:
     form_themes:
           - 'AppBundle:Form:color_picker.html.twig'
           - 'AppBundle:Form:multipleFile.html.twig'
+          - 'AppBundle:Form:picture.html.twig'
 
 # Assetic Configuration
 assetic:

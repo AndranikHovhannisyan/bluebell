@@ -25,6 +25,11 @@ services:
         tags:
             - { name: form.type, alias: color_picker }
 
+    app.form.type.picture:
+        class: AppBundle\Form\Type\PictureType
+        tags:
+            - { name: form.type, alias: picture }
+
     app.form.type.multiple.file:
         class: AppBundle\Form\Type\BBMultipleFileType
         tags:

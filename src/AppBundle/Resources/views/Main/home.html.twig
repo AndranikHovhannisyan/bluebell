@@ -1,0 +1,13 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    <link href="{{ asset('bundles/app/css/style.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('bundles/app/css/list_item.css') }}" rel="stylesheet" type="text/css"/>
+
+{% endblock %}
+
+{% block content %}
+    {{ dump(productTypes) }}
+{% endblock %}
