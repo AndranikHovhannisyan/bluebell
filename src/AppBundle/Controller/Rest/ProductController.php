@@ -32,23 +32,8 @@ class ProductController extends FOSRestController
         $flowers = $request->get('flowers');
         $rawTypes   = $request->get('products');
 
-        $types = [];
-        foreach($rawTypes as $rawType){
-            switch ($rawType) {
-                case "Bucket":
-                    $types[] = Product::BUCKET;
-                    break;
-                case "Composition":
-                    $types[] = Product::COMPOSITION;
-                    break;
-                case "Single Flower":
-                    $types[] = Product::SINGLE;
-                    break;
-            }
-        }
-
         $em = $this->getDoctrine()->getManager();
-        $products = $em->getRepository('AppBundle:Product')->findAllByFilters($first, $count, $types, $flowers, $colors);
+        $products = $em->getRepository('AppBundle:Product')->findAllByFilters($first, $count, $types = [], $flowers, $colors);
 
         $liipManager = $this->get('liip_imagine.cache.manager');
 

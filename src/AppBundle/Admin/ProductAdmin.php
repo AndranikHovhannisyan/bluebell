@@ -19,8 +19,7 @@ class ProductAdmin extends Admin
     {
         $datagridMapper
             ->add('id')
-            ->add('name')
-            ->add('code')
+            ->add('type')
             ->add('price')
             ->add('discounts')
         ;
@@ -33,14 +32,8 @@ class ProductAdmin extends Admin
     {
         $listMapper
             ->add('id')
-            ->add('name')
-            ->add('code')
             ->add('price')
-            ->add('type', 'choice', ['choices' => [
-                Product::BUCKET => 'Bucket',
-                Product::COMPOSITION => 'Composition',
-                Product::SINGLE => 'Single flower'
-            ] ])
+            ->add('type')
             ->add('colors')
             ->add('flowers')
             ->add('_action', 'actions', array(
@@ -59,14 +52,7 @@ class ProductAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('type', 'choice', ['choices' => [
-                Product::BUCKET => 'Bucket',
-                Product::COMPOSITION => 'Composition',
-                Product::SINGLE => 'Single flower'
-            ] ])
-            ->add('name')
-            ->add('code')
-            ->add('description', 'textarea', array('required' => false))
+            ->add('type')
             ->add('price', 'integer', array('attr' => array('min' => '0')))
             ->add('discounts', 'integer', array('attr' => array('min' => '0', 'max' => '100'), 'required' => false))
             ->add('colors')
@@ -82,9 +68,7 @@ class ProductAdmin extends Admin
     {
         $showMapper
             ->add('id')
-            ->add('name')
-            ->add('code')
-            ->add('description')
+            ->add('type')
             ->add('price')
             ->add('discounts')
         ;

@@ -20,10 +20,6 @@ use JMS\Serializer\Annotation\VirtualProperty;
  */
 class Product
 {
-    const BUCKET      = 0;
-    const COMPOSITION = 1;
-    const SINGLE      = 2;
-
     /**
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -31,24 +27,6 @@ class Product
      * @Groups({"product"})
      */
     protected $id;
-
-    /**
-     * @ORM\Column(name="name", type="string", length=50, nullable=false)
-     * @Groups({"product"})
-     */
-    protected $name;
-
-    /**
-     * @ORM\Column(name="code", type="string", length=50, nullable=false)
-     * @Groups({"product"})
-     */
-    protected $code;
-
-    /**
-     * @ORM\Column(name="description", type="string", length=500, nullable=true)
-     * @Groups({"product"})
-     */
-    protected $description;
 
     /**
      * @ORM\Column(name="price", type="float", nullable=false)
@@ -87,9 +65,10 @@ class Product
     protected $productImage;
 
     /**
-     * @ORM\Column(name="type", type="smallint", nullable=false)
+     * @ORM\ManyToOne(targetEntity="ProductType")
+     * @ORM\JoinColumn(name="type_id", referencedColumnName="id")
      */
-    protected $type = self::BUCKET;
+    protected $type;
 
     /**
      * @Groups({"product"})
@@ -111,7 +90,7 @@ class Product
      */
     public function __toString()
     {
-        return $this->name ? $this->name : '';
+        return '#' . $this->id;
     }
 
     /**
@@ -250,75 +229,6 @@ class Product
     public function getColors()
     {
         return $this->colors;
-    }
-
-    /**
-     * Set name
-     *
-     * @param string $name
-     * @return Product
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * Get name
-     *
-     * @return string 
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * Set code
-     *
-     * @param string $code
-     * @return Product
-     */
-    public function setCode($code)
-    {
-        $this->code = $code;
-
-        return $this;
-    }
-
-    /**
-     * Get code
-     *
-     * @return string 
-     */
-    public function getCode()
-    {
-        return $this->code;
-    }
-
-    /**
-     * Set description
-     *
-     * @param string $description
-     * @return Product
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
-     * @return string 
-     */
-    public function getDescription()
-    {
-        return $this->description;
     }
 
     /**

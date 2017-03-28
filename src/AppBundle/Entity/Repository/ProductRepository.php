@@ -41,8 +41,8 @@ class ProductRepository extends EntityRepository
             ->createQueryBuilder()
             ->select("DISTINCT p.id")
             ->from("AppBundle:Product", "p")
-            ->join('p.flowers', 'f')
-            ->where('NOT EXISTS (SELECT f1.id FROM AppBundle:Product p1 LEFT JOIN p1.flowers f1 WHERE f1.isExists = false AND p1.id = p.id)')
+//            ->join('p.flowers', 'f')
+//            ->where('NOT EXISTS (SELECT f1.id FROM AppBundle:Product p1 LEFT JOIN p1.flowers f1 WHERE f1.isExists = false AND p1.id = p.id)')
             ->setFirstResult($first)
             ->setMaxResults($count)
         ;

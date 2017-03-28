@@ -29,3 +29,9 @@ services:
         class: AppBundle\Form\Type\BBMultipleFileType
         tags:
             - { name: form.type, alias: bb_multiple_file }
+
+    app.admin.product_type:
+        class: AppBundle\Admin\ProductTypeAdmin
+        arguments: [~, AppBundle\Entity\ProductType, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: ProductType}
